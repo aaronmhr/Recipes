@@ -15,16 +15,28 @@ import Foundation
 
 // MARK: - ResponseModel
 struct ResponseModel: Decodable {
-    let title: String
-    let version: Double
-    let href: String
-    let results: [RecipeResponse]
+    let title: String?
+    let version: Double?
+    let href: String?
+    let results: [RecipeResponse]?
 }
 
 // MARK: - Result
 struct RecipeResponse: Decodable {
-    let title: String
-    let href: String
-    let ingredients: String
-    let thumbnail: String
+    let title: String?
+    let href: String?
+    let ingredients: String?
+    let thumbnail: String?
+}
+
+extension RecipeResponse {
+    static func makeRecipe(_ response: RecipeResponse) -> Recipe? {
+        guard let title = response.title,
+            let ingredients = response.ingredients,
+            let url = URL(string: response.href ?? ""),
+            let thumbnail = URL(string: response.href ?? "") else {
+                return nil
+        }
+        return Recipe(title: title, ingredients: ingredients, url: url, thumbnail: thumbnail)
+    }
 }

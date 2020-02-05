@@ -10,7 +10,7 @@ import Foundation
 
 struct Recipe {
     let title: String
-    let href: URL
     let ingredients: String
+    let url: URL
     let thumbnail: URL
 }
