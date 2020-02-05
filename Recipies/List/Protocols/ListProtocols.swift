@@ -19,4 +19,5 @@ protocol ListPresenterProtocol {
 
 protocol ListViewProtocol: class {
     var recipes: [RecipeViewModel] { get set }
+    func setupScreen(title: String, searchPlaceholder: String)
 }

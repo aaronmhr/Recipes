@@ -24,5 +24,8 @@ final class ListViewController: UIViewController {
 }
 
 extension ListViewController: ListViewProtocol {
-
+    func setupScreen(title: String, searchPlaceholder: String) {
+        navigationItem.largeTitleDisplayMode = .always
+        self.title = title
+    }
 }

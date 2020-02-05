@@ -20,7 +20,7 @@ final class ListPresenter {
 
 extension ListPresenter: ListPresenterProtocol {
     func viewDidLoad() {
-        attemptSearch()
+        view.setupScreen(title: Localizables.screenTitleKey, searchPlaceholder: Localizables.searchPlaceholderKey)
     }
     
     func attemptSearch() {
@@ -33,5 +33,12 @@ extension ListPresenter: ListPresenterProtocol {
                 break
             }
         })
+    }
+}
+
+extension ListPresenter {
+    private enum Localizables {
+        static let screenTitleKey = "Recipies"
+        static let searchPlaceholderKey = "Ingredients..."
     }
 }
