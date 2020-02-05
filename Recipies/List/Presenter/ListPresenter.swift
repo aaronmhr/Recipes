@@ -23,14 +23,13 @@ extension ListPresenter: ListPresenterProtocol {
         view.setupScreen(title: Localizables.screenTitleKey, searchPlaceholder: Localizables.searchPlaceholderKey)
     }
     
-    func attemptSearch() {
+    func attemptSearch(for text: String) {
         interactor.getBeers(completion: { [weak self] result in
             switch result {
             case .success(let recipes):
                 self?.view.recipes = recipes.map(RecipeViewModel.make)
             case .failure(let error):
                 print(error)
-                break
             }
         })
     }

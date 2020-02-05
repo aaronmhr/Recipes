@@ -15,6 +15,7 @@ protocol ListRouterProtocol {
 
 protocol ListPresenterProtocol {
     func viewDidLoad()
+    func attemptSearch(for text: String)
 }
 
 protocol ListViewProtocol: class {
