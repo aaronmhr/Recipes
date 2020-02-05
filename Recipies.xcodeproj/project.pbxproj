@@ -23,6 +23,7 @@
 		1844BC0D23EB712C00A4BF6A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC0C23EB712C00A4BF6A /* Recipe.swift */; };
 		1844BC1123EB731500A4BF6A /* MockingRecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC1023EB731500A4BF6A /* MockingRecipeRepository.swift */; };
 		1844BC1423EB73AE00A4BF6A /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1844BC1323EB73AE00A4BF6A /* test.json */; };
+		1844BC1723EB7A2500A4BF6A /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC1623EB7A2500A4BF6A /* RecipeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1844BC0C23EB712C00A4BF6A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		1844BC1023EB731500A4BF6A /* MockingRecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingRecipeRepository.swift; sourceTree = "<group>"; };
 		1844BC1323EB73AE00A4BF6A /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		1844BC1623EB7A2500A4BF6A /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +184,9 @@
 		1844BC0423EB700200A4BF6A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1844BC0B23EB711E00A4BF6A /* Domain */,
 				1844BC0523EB700700A4BF6A /* Response */,
+				1844BC0B23EB711E00A4BF6A /* Domain */,
+				1844BC1523EB7A0800A4BF6A /* ViewModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +223,14 @@
 				1844BC1323EB73AE00A4BF6A /* test.json */,
 			);
 			path = MockingRepository;
+			sourceTree = "<group>";
+		};
+		1844BC1523EB7A0800A4BF6A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1844BC1623EB7A2500A4BF6A /* RecipeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +339,7 @@
 				1844BC0323EB6EAD00A4BF6A /* ListRouter.swift in Sources */,
 				1844BBB923EB6C5000A4BF6A /* AppDelegate.swift in Sources */,
 				1844BBFE23EB6EAD00A4BF6A /* ListPresenter.swift in Sources */,
+				1844BC1723EB7A2500A4BF6A /* RecipeViewModel.swift in Sources */,
 				1844BC1123EB731500A4BF6A /* MockingRecipeRepository.swift in Sources */,
 				1844BC0A23EB70F000A4BF6A /* RecipeRepository.swift in Sources */,
 				1844BBFF23EB6EAD00A4BF6A /* ListViewController.swift in Sources */,

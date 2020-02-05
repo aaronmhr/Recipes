@@ -9,8 +9,18 @@
 import Foundation
 
 struct Recipe {
-    let title: String
+    let name: String
     let ingredients: String
     let url: URL
     let thumbnail: URL
+}
+
+extension Recipe {
+    var hasLactose: Bool {
+        return ingredients.lowercased().contains("milk") || ingredients.lowercased().contains("cheese")
+    }
+}
+
+enum RecipeError: Error {
+    case invalid
 }

@@ -37,6 +37,6 @@ extension RecipeResponse {
             let thumbnail = URL(string: response.href ?? "") else {
                 return nil
         }
-        return Recipe(title: title, ingredients: ingredients, url: url, thumbnail: thumbnail)
+        return Recipe(name: title, ingredients: ingredients, url: url, thumbnail: thumbnail)
     }
 }

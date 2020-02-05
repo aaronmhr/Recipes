@@ -7,9 +7,19 @@
 //
 
 final class ListInteractor {
-    init() { }
+    let repository: RecipeRepository
+    
+    init(with repository: RecipeRepository) {
+        self.repository = repository
+    }
 }
 
 extension ListInteractor: ListInteractorProtocol {
-
+    func getBeers(completion: @escaping (Result<[Recipe],RecipeError>) -> Void) {
+        repository.getRecipies { result in
+            completion(result.mapError({ repositoryError -> RecipeError in
+                return RecipeError.invalid
+            }))
+        }
+    }
 }

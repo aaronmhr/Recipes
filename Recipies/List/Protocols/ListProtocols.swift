@@ -7,13 +7,16 @@
 //
 
 protocol ListInteractorProtocol {
+    func getBeers(completion: @escaping (Result<[Recipe],RecipeError>) -> Void)
 }
 
 protocol ListRouterProtocol {
 }
 
 protocol ListPresenterProtocol {
+    func viewDidLoad()
 }
 
 protocol ListViewProtocol: class {
+    var recipes: [RecipeViewModel] { get set }
 }

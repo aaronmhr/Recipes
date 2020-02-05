@@ -19,7 +19,9 @@ final class ListRouter: StoryboardInstantiator {
         let viewController = defaultViewController(for: ListViewController.self)
         let router = ListRouter(view: ListViewController())
 
-        let interactor = ListInteractor()
+        let repository = MockingRecipeRepository()
+        
+        let interactor = ListInteractor(with: repository)
         let presenter = ListPresenter(withView: viewController, interactor: interactor, router: router)
 
         viewController.presenter = presenter

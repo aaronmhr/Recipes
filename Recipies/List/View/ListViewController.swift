@@ -10,9 +10,16 @@ import UIKit
 
 final class ListViewController: UIViewController {
     var presenter: ListPresenterProtocol!
+    
+    var recipes: [RecipeViewModel] = [] {
+        didSet {
+            dump(recipes)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
 }
 
