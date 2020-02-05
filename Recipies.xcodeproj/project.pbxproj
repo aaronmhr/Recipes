@@ -18,6 +18,7 @@
 		1844BC0123EB6EAD00A4BF6A /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBF923EB6EAD00A4BF6A /* ListProtocols.swift */; };
 		1844BC0223EB6EAD00A4BF6A /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBFB23EB6EAD00A4BF6A /* ListInteractor.swift */; };
 		1844BC0323EB6EAD00A4BF6A /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBFD23EB6EAD00A4BF6A /* ListRouter.swift */; };
+		1844BC0723EB701900A4BF6A /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC0623EB701900A4BF6A /* RecipeResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1844BBF923EB6EAD00A4BF6A /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
 		1844BBFB23EB6EAD00A4BF6A /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		1844BBFD23EB6EAD00A4BF6A /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		1844BC0623EB701900A4BF6A /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		1844BBF223EB6EAD00A4BF6A /* List */ = {
 			isa = PBXGroup;
 			children = (
+				1844BC0423EB700200A4BF6A /* Models */,
 				1844BBF323EB6EAD00A4BF6A /* Presenter */,
 				1844BBF523EB6EAD00A4BF6A /* View */,
 				1844BBF823EB6EAD00A4BF6A /* Protocols */,
@@ -165,6 +168,22 @@
 				1844BBFD23EB6EAD00A4BF6A /* ListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		1844BC0423EB700200A4BF6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1844BC0523EB700700A4BF6A /* Response */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1844BC0523EB700700A4BF6A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1844BC0623EB701900A4BF6A /* RecipeResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +293,7 @@
 				1844BBFE23EB6EAD00A4BF6A /* ListPresenter.swift in Sources */,
 				1844BBFF23EB6EAD00A4BF6A /* ListViewController.swift in Sources */,
 				1844BC0123EB6EAD00A4BF6A /* ListProtocols.swift in Sources */,
+				1844BC0723EB701900A4BF6A /* RecipeResponse.swift in Sources */,
 				1844BBF123EB6DD000A4BF6A /* StoryboardHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
