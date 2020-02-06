@@ -34,7 +34,7 @@ extension RecipeResponse {
         guard let title = response.title,
             let ingredients = response.ingredients,
             let url = URL(string: response.href ?? ""),
-            let thumbnail = URL(string: response.href ?? "") else {
+            let thumbnail = URL(string: response.thumbnail ?? "") else {
                 return nil
         }
         return Recipe(name: title, ingredients: ingredients, url: url, thumbnail: thumbnail)

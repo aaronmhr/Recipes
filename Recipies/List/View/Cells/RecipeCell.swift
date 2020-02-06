@@ -19,7 +19,7 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
     override func awakeFromNib() {
         super.awakeFromNib()
         addShadowToCell()
-        configureHighAVBLabel()
+        configureHasLactoseLabel()
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -53,7 +53,7 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
         self.layer.masksToBounds = false
     }
     
-    private func configureHighAVBLabel() {
+    private func configureHasLactoseLabel() {
         hasLactoseLabel.transform = CGAffineTransform(rotationAngle: 45 * CGFloat.pi / 180)
     }
 }
