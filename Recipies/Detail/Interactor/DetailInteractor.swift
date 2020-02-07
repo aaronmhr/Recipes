@@ -6,10 +6,20 @@
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
 //
 
+import Foundation
+
 final class DetailInteractor {
-    init() { }
+    let url: URL
+    let title: String
+    
+    init(title: String, url: URL) {
+        self.url = url
+        self.title = title
+    }
 }
 
 extension DetailInteractor: DetailInteractorProtocol {
-
+    var urlRequest: URLRequest {
+        return URLRequest(url: url, timeoutInterval: 5.0)
+    }
 }

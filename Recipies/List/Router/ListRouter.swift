@@ -33,7 +33,7 @@ final class ListRouter: StoryboardInstantiator {
 
 extension ListRouter: ListRouterProtocol {
     func showRecipe(title: String, url: URL, animated: Bool) {
-        let viewController = DetailRouter.assembleModule()
+        let viewController = DetailRouter.assembleModule(title: title, url: url)
         view.navigationController?.pushViewController(viewController, animated: animated)
     }
 }

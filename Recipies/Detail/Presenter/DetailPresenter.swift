@@ -19,5 +19,8 @@ final class DetailPresenter {
 }
 
 extension DetailPresenter: DetailPresenterProtocol {
-
+    func viewDidLoad() {
+        view.setPageTitle(interactor.title)
+        view.startLoading(urlRequest: interactor.urlRequest)
+    }
 }
