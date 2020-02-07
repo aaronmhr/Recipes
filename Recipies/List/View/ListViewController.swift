@@ -69,7 +69,7 @@ extension ListViewController: UISearchBarDelegate {
 
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard indexPath.row >= (recipes.count - 1) else { return }
+        guard indexPath.row >= (recipes.count - 2) else { return }
         presenter.getMoreRecipes()
     }
 }

@@ -35,7 +35,7 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
     }
     
     func configure(with viewModel: RecipeViewModel) {
-        recipeImage.kf.setImage(with: viewModel.image)
+        recipeImage.kf.setImage(with: viewModel.image, placeholder: #imageLiteral(resourceName: "placeholder"))
         titleLabel.text = viewModel.name
         ingredientsLabel.text = viewModel.ingredients
         favoritesButton.setTitle(viewModel.button, for: .normal)

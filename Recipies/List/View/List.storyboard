@@ -31,7 +31,7 @@
                         <constraints>
                             <constraint firstItem="qFM-1n-YwI" firstAttribute="leading" secondItem="RB8-te-vSr" secondAttribute="leading" id="BMs-5V-sJ9"/>
                             <constraint firstItem="qFM-1n-YwI" firstAttribute="top" secondItem="RB8-te-vSr" secondAttribute="top" id="DfY-Hb-1d7"/>
-                            <constraint firstItem="qFM-1n-YwI" firstAttribute="bottom" secondItem="RB8-te-vSr" secondAttribute="bottom" id="Kal-AL-Ugx"/>
+                            <constraint firstItem="qFM-1n-YwI" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Kal-AL-Ugx"/>
                             <constraint firstItem="qFM-1n-YwI" firstAttribute="trailing" secondItem="RB8-te-vSr" secondAttribute="trailing" id="cnK-6q-9yU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RB8-te-vSr"/>
