@@ -50,6 +50,7 @@ final class ListViewController: UIViewController {
 
 extension ListViewController: ListViewProtocol {
     func setupScreen(title: String, searchPlaceholder: String) {
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
         self.title = title
         searchController.searchBar.placeholder = searchPlaceholder
