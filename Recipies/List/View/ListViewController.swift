@@ -73,6 +73,10 @@ extension ListViewController: UICollectionViewDelegate {
         guard indexPath.row >= (recipes.count - 2) else { return }
         presenter.getMoreRecipes()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectItemAt(indexPath.row)
+    }
 }
 
 extension ListViewController: UICollectionViewDataSource {

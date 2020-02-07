@@ -6,7 +6,10 @@
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
 //
 
+import Foundation
+
 protocol ListInteractorProtocol {
+    var recipes: [Recipe] { get }
     func attemptNewSearch(for text: String, completion: @escaping (Result<[Recipe],RecipeError>) -> Void)
     func getMoreRecipes()
 }
@@ -16,12 +19,14 @@ protocol SearchFormatterInteractorProtocol {
 }
 
 protocol ListRouterProtocol {
+    func showRecipe(title: String, url: URL, animated: Bool)
 }
 
 protocol ListPresenterProtocol {
     func viewDidLoad()
     func attemptSearch(for text: String)
     func getMoreRecipes()
+    func didSelectItemAt(_ index: Int)
 }
 
 protocol ListViewProtocol: class {

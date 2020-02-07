@@ -12,7 +12,7 @@ final class ListInteractor {
     private var page = 1
     private var isLastPage = false
     private var isAlreadyFetching = false
-    private var recipes: [Recipe] = []
+    private(set) var recipes: [Recipe] = []
     
     private var completion: (Result<[Recipe],RecipeError>) -> Void = { _ in}
     

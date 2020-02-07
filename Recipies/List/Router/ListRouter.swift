@@ -17,7 +17,7 @@ final class ListRouter: StoryboardInstantiator {
 
     static func assembleModule() -> UIViewController {
         let viewController = defaultViewController(for: ListViewController.self)
-        let router = ListRouter(view: ListViewController())
+        let router = ListRouter(view: viewController)
 
         let repository = MockingRecipeRepository()
         
@@ -32,5 +32,8 @@ final class ListRouter: StoryboardInstantiator {
 }
 
 extension ListRouter: ListRouterProtocol {
-
+    func showRecipe(title: String, url: URL, animated: Bool) {
+        let viewController = DetailRouter.assembleModule()
+        view.navigationController?.pushViewController(viewController, animated: animated)
+    }
 }

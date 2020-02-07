@@ -41,6 +41,12 @@ extension ListPresenter: ListPresenterProtocol {
     func getMoreRecipes() {
         interactor.getMoreRecipes()
     }
+    
+    func didSelectItemAt(_ index: Int) {
+        guard interactor.recipes.indices.contains(index) else { return }
+        let recipe = interactor.recipes[index]
+        router.showRecipe(title: recipe.name, url: recipe.url, animated: true)
+    }
 }
 
 extension ListPresenter {
