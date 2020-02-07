@@ -9,9 +9,9 @@
 import Foundation
 
 final class MockingRecipeRepository: RecipeRepository {
-    func getRecipies(completion: @escaping (Result<[Recipe], RepositoryError>) -> Void) {
+    func getRecipies(for text: String, page: Int, completion: @escaping (Result<[Recipe], RepositoryError>) -> Void) {
         do {
-            let response: ResponseModel = try ResponseModel.readJSONFrom(from: "test")
+            let response: ResponseModel = try ResponseModel.readJSONFrom(from: "test" + "\(page)")
             let recipies = response.results?.compactMap(RecipeResponse.makeRecipe) ?? []
             completion(.success(recipies))
         } catch {

@@ -24,14 +24,19 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func attemptSearch(for text: String) {
-        interactor.getBeers(completion: { [weak self] result in
+        interactor.attemptNewSearch(for: text, completion: { [weak self] result in
             switch result {
             case .success(let recipes):
-                self?.view.recipes = recipes.map(RecipeViewModel.make)
+                let viewModels = recipes.map(RecipeViewModel.make)
+                self?.view.recipes = viewModels
             case .failure(let error):
                 print(error)
             }
         })
+    }
+    
+    func getMoreRecipes() {
+        interactor.getMoreRecipes()
     }
 }
 

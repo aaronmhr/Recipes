@@ -19,7 +19,9 @@ final class ListViewController: UIViewController {
     
     var recipes: [RecipeViewModel] = [] {
         didSet {
-            collectionView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView.reloadData()
+            }
         }
     }
 
@@ -67,9 +69,8 @@ extension ListViewController: UISearchBarDelegate {
 
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard indexPath.row >= (recipes.count - 2),
-        let text = searchController.searchBar.text else { return }
-        presenter.attemptSearch(for: text)
+        guard indexPath.row >= (recipes.count - 1) else { return }
+        presenter.getMoreRecipes()
     }
 }
 

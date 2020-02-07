@@ -7,7 +7,8 @@
 //
 
 protocol ListInteractorProtocol {
-    func getBeers(completion: @escaping (Result<[Recipe],RecipeError>) -> Void)
+    func attemptNewSearch(for text: String, completion: @escaping (Result<[Recipe],RecipeError>) -> Void)
+    func getMoreRecipes()
 }
 
 protocol ListRouterProtocol {
@@ -16,6 +17,7 @@ protocol ListRouterProtocol {
 protocol ListPresenterProtocol {
     func viewDidLoad()
     func attemptSearch(for text: String)
+    func getMoreRecipes()
 }
 
 protocol ListViewProtocol: class {

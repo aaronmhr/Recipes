@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RecipeRepository {
-    func getRecipies(completion: @escaping (Result<[Recipe],RepositoryError>) -> Void)
+    func getRecipies(for text: String, page: Int, completion: @escaping (Result<[Recipe],RepositoryError>) -> Void)
 }
 
 enum RepositoryError: Error {

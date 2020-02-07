@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,11 +22,14 @@
 		1844BC0A23EB70F000A4BF6A /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC0923EB70F000A4BF6A /* RecipeRepository.swift */; };
 		1844BC0D23EB712C00A4BF6A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC0C23EB712C00A4BF6A /* Recipe.swift */; };
 		1844BC1123EB731500A4BF6A /* MockingRecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC1023EB731500A4BF6A /* MockingRecipeRepository.swift */; };
-		1844BC1423EB73AE00A4BF6A /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1844BC1323EB73AE00A4BF6A /* test.json */; };
 		1844BC1723EB7A2500A4BF6A /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC1623EB7A2500A4BF6A /* RecipeViewModel.swift */; };
 		1844BC1C23EB84DF00A4BF6A /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1844BC1B23EB84DF00A4BF6A /* RecipeCell.xib */; };
 		1844BC1E23EB850E00A4BF6A /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC1D23EB850E00A4BF6A /* RecipeCell.swift */; };
 		1844BC2023EB856200A4BF6A /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC1F23EB856200A4BF6A /* NibReusable.swift */; };
+		1873678D23ED32560094483D /* test4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678923ED32550094483D /* test4.json */; };
+		1873678E23ED32560094483D /* test3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678A23ED32550094483D /* test3.json */; };
+		1873678F23ED32560094483D /* test1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678B23ED32550094483D /* test1.json */; };
+		1873679023ED32560094483D /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678C23ED32560094483D /* test2.json */; };
 		4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */; };
 		940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */; };
 /* End PBXBuildFile section */
@@ -61,11 +64,14 @@
 		1844BC0923EB70F000A4BF6A /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
 		1844BC0C23EB712C00A4BF6A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		1844BC1023EB731500A4BF6A /* MockingRecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingRecipeRepository.swift; sourceTree = "<group>"; };
-		1844BC1323EB73AE00A4BF6A /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		1844BC1623EB7A2500A4BF6A /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		1844BC1B23EB84DF00A4BF6A /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		1844BC1D23EB850E00A4BF6A /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		1844BC1F23EB856200A4BF6A /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
+		1873678923ED32550094483D /* test4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test4.json; sourceTree = "<group>"; };
+		1873678A23ED32550094483D /* test3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test3.json; sourceTree = "<group>"; };
+		1873678B23ED32550094483D /* test1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1.json; sourceTree = "<group>"; };
+		1873678C23ED32560094483D /* test2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2.json; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.release.xcconfig"; sourceTree = "<group>"; };
 		4845F00413F1965065B2F126 /* Pods-Recipies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipies.release.xcconfig"; path = "Target Support Files/Pods-Recipies/Pods-Recipies.release.xcconfig"; sourceTree = "<group>"; };
@@ -240,7 +246,10 @@
 		1844BC1223EB739500A4BF6A /* MockingRepository */ = {
 			isa = PBXGroup;
 			children = (
-				1844BC1323EB73AE00A4BF6A /* test.json */,
+				1873678B23ED32550094483D /* test1.json */,
+				1873678C23ED32560094483D /* test2.json */,
+				1873678A23ED32550094483D /* test3.json */,
+				1873678923ED32550094483D /* test4.json */,
 			);
 			path = MockingRepository;
 			sourceTree = "<group>";
@@ -279,7 +288,6 @@
 				25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */,
 				42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -367,10 +375,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1873678F23ED32560094483D /* test1.json in Resources */,
 				1844BBC523EB6C5300A4BF6A /* LaunchScreen.storyboard in Resources */,
-				1844BC1423EB73AE00A4BF6A /* test.json in Resources */,
+				1873678E23ED32560094483D /* test3.json in Resources */,
 				1844BC1C23EB84DF00A4BF6A /* RecipeCell.xib in Resources */,
+				1873679023ED32560094483D /* test2.json in Resources */,
 				1844BC0023EB6EAD00A4BF6A /* List.storyboard in Resources */,
+				1873678D23ED32560094483D /* test4.json in Resources */,
 				1844BBC223EB6C5300A4BF6A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
