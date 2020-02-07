@@ -8,18 +8,18 @@
 
 import RealmSwift
 
-final class RealmService {
-    let realm: Realm
+public final class RealmService {
+    private let realm: Realm
     
-    init(realm: Realm = try! Realm()) {
+    public init(realm: Realm = try! Realm()) {
         self.realm = realm
     }
     
-    func read<T: Object>(_ objectType: T.Type) -> Results<T> {
+    public func read<T: Object>(_ objectType: T.Type) -> Results<T> {
         return realm.objects(objectType)
     }
     
-    func create<T: Object>(_ object: T) throws {
+    public func create<T: Object>(_ object: T) throws {
         do {
             try realm.write {
                 realm.add(object)
@@ -29,7 +29,7 @@ final class RealmService {
         }
     }
 
-    func delete<T: Object>(_ type: T.Type) throws {
+    public func delete<T: Object>(_ type: T.Type) throws {
         do {
             try realm.write {
                 let objects = realm.objects(type)
