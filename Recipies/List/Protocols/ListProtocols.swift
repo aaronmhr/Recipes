@@ -11,6 +11,10 @@ protocol ListInteractorProtocol {
     func getMoreRecipes()
 }
 
+protocol SearchFormatterInteractorProtocol {
+    func format(_ searchText: String) -> String
+}
+
 protocol ListRouterProtocol {
 }
 

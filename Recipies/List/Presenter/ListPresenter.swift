@@ -9,11 +9,13 @@
 final class ListPresenter {
     let router: ListRouterProtocol
     let interactor: ListInteractorProtocol
+    let formatterInteractor: SearchFormatterInteractorProtocol
     weak var view: ListViewProtocol!
 
-    init(withView view: ListViewProtocol, interactor: ListInteractorProtocol, router: ListRouterProtocol) {
+    init(withView view: ListViewProtocol, interactor: ListInteractorProtocol, formatterInteractor: SearchFormatterInteractorProtocol, router: ListRouterProtocol) {
         self.view = view
         self.interactor = interactor
+        self.formatterInteractor = formatterInteractor
         self.router = router
     }
 }
@@ -24,7 +26,8 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func attemptSearch(for text: String) {
-        interactor.attemptNewSearch(for: text, completion: { [weak self] result in
+        let formattedIngredients = formatterInteractor.format(text)
+        interactor.attemptNewSearch(for: formattedIngredients, completion: { [weak self] result in
             switch result {
             case .success(let recipes):
                 let viewModels = recipes.map(RecipeViewModel.make)

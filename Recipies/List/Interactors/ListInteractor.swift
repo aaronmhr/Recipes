@@ -19,13 +19,6 @@ final class ListInteractor {
     init(with repository: RecipeRepository) {
         self.repository = repository
     }
-    
-    private var preparedText: (String) -> String = { searchText in
-        let commaRemoved = searchText.replacingOccurrences(of: "[0-9/*+-]", with: " ", options: .regularExpression, range: nil)
-        let spacesRemoved = commaRemoved.replacingOccurrences(of: "[\\s\n]+", with: ",", options: .regularExpression, range: nil)
-        let deleteLastIfNeeded = spacesRemoved.last == "," ? String(spacesRemoved.dropLast()) : spacesRemoved
-        return deleteLastIfNeeded.lowercased()
-    }
 }
 
 extension ListInteractor: ListInteractorProtocol {
@@ -39,7 +32,7 @@ extension ListInteractor: ListInteractorProtocol {
     func attemptNewSearch(for text: String, completion: @escaping (Result<[Recipe],RecipeError>) -> Void) {
         resetSearch()
         self.completion = completion
-        ingredients = preparedText(text)
+        ingredients = text
         guard text.count >= 3 else { return }
         getMoreRecipes()
     }

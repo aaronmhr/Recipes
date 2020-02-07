@@ -30,6 +30,7 @@
 		1873678E23ED32560094483D /* test3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678A23ED32550094483D /* test3.json */; };
 		1873678F23ED32560094483D /* test1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678B23ED32550094483D /* test1.json */; };
 		1873679023ED32560094483D /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678C23ED32560094483D /* test2.json */; };
+		1873679323EDE32A0094483D /* SearchFormatterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873679223EDE32A0094483D /* SearchFormatterInteractor.swift */; };
 		4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */; };
 		940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		1873678A23ED32550094483D /* test3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test3.json; sourceTree = "<group>"; };
 		1873678B23ED32550094483D /* test1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1.json; sourceTree = "<group>"; };
 		1873678C23ED32560094483D /* test2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2.json; sourceTree = "<group>"; };
+		1873679223EDE32A0094483D /* SearchFormatterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormatterInteractor.swift; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.release.xcconfig"; sourceTree = "<group>"; };
 		4845F00413F1965065B2F126 /* Pods-Recipies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipies.release.xcconfig"; path = "Target Support Files/Pods-Recipies/Pods-Recipies.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 				1844BBF323EB6EAD00A4BF6A /* Presenter */,
 				1844BBF523EB6EAD00A4BF6A /* View */,
 				1844BBF823EB6EAD00A4BF6A /* Protocols */,
-				1844BBFA23EB6EAD00A4BF6A /* Interactor */,
+				1844BBFA23EB6EAD00A4BF6A /* Interactors */,
 				1844BBFC23EB6EAD00A4BF6A /* Router */,
 			);
 			path = List;
@@ -191,12 +193,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		1844BBFA23EB6EAD00A4BF6A /* Interactor */ = {
+		1844BBFA23EB6EAD00A4BF6A /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
 				1844BBFB23EB6EAD00A4BF6A /* ListInteractor.swift */,
+				1873679223EDE32A0094483D /* SearchFormatterInteractor.swift */,
 			);
-			path = Interactor;
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		1844BBFC23EB6EAD00A4BF6A /* Router */ = {
@@ -468,6 +471,7 @@
 				1844BC0323EB6EAD00A4BF6A /* ListRouter.swift in Sources */,
 				1844BBB923EB6C5000A4BF6A /* AppDelegate.swift in Sources */,
 				1844BBFE23EB6EAD00A4BF6A /* ListPresenter.swift in Sources */,
+				1873679323EDE32A0094483D /* SearchFormatterInteractor.swift in Sources */,
 				1844BC1723EB7A2500A4BF6A /* RecipeViewModel.swift in Sources */,
 				1844BC1123EB731500A4BF6A /* MockingRecipeRepository.swift in Sources */,
 				1844BC0A23EB70F000A4BF6A /* RecipeRepository.swift in Sources */,
