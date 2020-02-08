@@ -19,10 +19,38 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
-		<key>Recipies.xcscheme_^#shared#^_</key>
+		<key>Recipes.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1844BBB423EB6C5000A4BF6A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1844BBCA23EB6C5300A4BF6A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>187CBF6F23EE12EF001AED72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>187E128F23EEA31300B544F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>187E12DC23EF0BA700B544F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

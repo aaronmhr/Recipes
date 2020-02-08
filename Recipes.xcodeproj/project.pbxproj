@@ -67,9 +67,9 @@
 		187E12F823EF0C1F00B544F3 /* test3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678A23ED32550094483D /* test3.json */; };
 		187E12F923EF0C1F00B544F3 /* test4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1873678923ED32550094483D /* test4.json */; };
 		187E12FA23EF0CC300B544F3 /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC0923EB70F000A4BF6A /* RecipeRepository.swift */; };
-		4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */; };
-		940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */; };
 		C65A764E8A8273D4157DB5E2 /* Pods_DatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */; };
+		CE8B8145C8D91C5CD53FC284 /* Pods_Recipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38418A69CF3EE8E87A47ADA0 /* Pods_Recipes.framework */; };
+		CF321C0A5F0857843680A300 /* Pods_RecipesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5428717627A3D23B50AE489 /* Pods_RecipesTests.framework */; };
 		FC4AC46BBFD413FBBCBEA76E /* Pods_Database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7F5DA966D78AA10741C162 /* Pods_Database.framework */; };
 /* End PBXBuildFile section */
 
@@ -177,12 +177,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1844BBB523EB6C5000A4BF6A /* Recipies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		059C8D54257F8D2571A45D41 /* Pods-RecipesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipesTests/Pods-RecipesTests.release.xcconfig"; sourceTree = "<group>"; };
+		1844BBB523EB6C5000A4BF6A /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1844BBB823EB6C5000A4BF6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1844BBC123EB6C5300A4BF6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1844BBC423EB6C5300A4BF6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1844BBC623EB6C5300A4BF6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1844BBCB23EB6C5300A4BF6A /* RecipiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1844BBCB23EB6C5300A4BF6A /* RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1844BBCF23EB6C5300A4BF6A /* RecipiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesTests.swift; sourceTree = "<group>"; };
 		1844BBD123EB6C5300A4BF6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1844BBF023EB6DD000A4BF6A /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
@@ -246,16 +247,19 @@
 		187E12E623EF0BA700B544F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38418A69CF3EE8E87A47ADA0 /* Pods_Recipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.release.xcconfig"; sourceTree = "<group>"; };
 		4845F00413F1965065B2F126 /* Pods-Recipies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipies.release.xcconfig"; path = "Target Support Files/Pods-Recipies/Pods-Recipies.release.xcconfig"; sourceTree = "<group>"; };
-		6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5248BBFBA54B9A078A09D445 /* Pods-Recipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipes.release.xcconfig"; path = "Target Support Files/Pods-Recipes/Pods-Recipes.release.xcconfig"; sourceTree = "<group>"; };
 		7E7F5DA966D78AA10741C162 /* Pods_Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC4B0990C7BBDC867B11F52 /* Pods-Recipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipes.debug.xcconfig"; path = "Target Support Files/Pods-Recipes/Pods-Recipes.debug.xcconfig"; sourceTree = "<group>"; };
 		AAE1BB90803E75A1E19578FD /* Pods-Database.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Database.release.xcconfig"; path = "Target Support Files/Pods-Database/Pods-Database.release.xcconfig"; sourceTree = "<group>"; };
 		B2A4C6CE9F0B126BC41CCBCE /* Pods-DatabaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseTests.release.xcconfig"; path = "Target Support Files/Pods-DatabaseTests/Pods-DatabaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		BABABB2A76D94513F5D3B7AC /* Pods-Recipies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipies.debug.xcconfig"; path = "Target Support Files/Pods-Recipies/Pods-Recipies.debug.xcconfig"; sourceTree = "<group>"; };
 		BFF26FB07A542D886BCF533F /* Pods-DatabaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseTests.debug.xcconfig"; path = "Target Support Files/Pods-DatabaseTests/Pods-DatabaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5428717627A3D23B50AE489 /* Pods_RecipesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CA21C358F5407F29ED2421 /* Pods-Database.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Database.debug.xcconfig"; path = "Target Support Files/Pods-Database/Pods-Database.debug.xcconfig"; sourceTree = "<group>"; };
+		FCD5D57495E7212AF3388D51 /* Pods-RecipesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipesTests/Pods-RecipesTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,9 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				187E12EA23EF0BA700B544F3 /* Networking.framework in Frameworks */,
-				940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */,
 				187E129D23EEA31300B544F3 /* Core.framework in Frameworks */,
 				187CBF7D23EE12EF001AED72 /* Database.framework in Frameworks */,
+				CE8B8145C8D91C5CD53FC284 /* Pods_Recipes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +278,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */,
+				CF321C0A5F0857843680A300 /* Pods_RecipesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,8 +335,8 @@
 		1844BBAC23EB6C5000A4BF6A = {
 			isa = PBXGroup;
 			children = (
-				1844BBB723EB6C5000A4BF6A /* Recipies */,
-				1844BBCE23EB6C5300A4BF6A /* RecipiesTests */,
+				1844BBB723EB6C5000A4BF6A /* Recipes */,
+				1844BBCE23EB6C5300A4BF6A /* RecipesTests */,
 				187CBF6923EE12EF001AED72 /* Database */,
 				187CBF7623EE12EF001AED72 /* DatabaseTests */,
 				187E128923EEA31300B544F3 /* Core */,
@@ -348,8 +352,8 @@
 		1844BBB623EB6C5000A4BF6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1844BBB523EB6C5000A4BF6A /* Recipies.app */,
-				1844BBCB23EB6C5300A4BF6A /* RecipiesTests.xctest */,
+				1844BBB523EB6C5000A4BF6A /* Recipes.app */,
+				1844BBCB23EB6C5300A4BF6A /* RecipesTests.xctest */,
 				187CBF6823EE12EF001AED72 /* Database.framework */,
 				187CBF7023EE12EF001AED72 /* DatabaseTests.xctest */,
 				187E128823EEA31300B544F3 /* Core.framework */,
@@ -360,7 +364,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1844BBB723EB6C5000A4BF6A /* Recipies */ = {
+		1844BBB723EB6C5000A4BF6A /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
 				187E12B523EEB79700B544F3 /* Favorites */,
@@ -372,16 +376,16 @@
 				1844BBC323EB6C5300A4BF6A /* LaunchScreen.storyboard */,
 				1844BBC623EB6C5300A4BF6A /* Info.plist */,
 			);
-			path = Recipies;
+			path = Recipes;
 			sourceTree = "<group>";
 		};
-		1844BBCE23EB6C5300A4BF6A /* RecipiesTests */ = {
+		1844BBCE23EB6C5300A4BF6A /* RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
 				1844BBCF23EB6C5300A4BF6A /* RecipiesTests.swift */,
 				1844BBD123EB6C5300A4BF6A /* Info.plist */,
 			);
-			path = RecipiesTests;
+			path = RecipesTests;
 			sourceTree = "<group>";
 		};
 		1844BBEF23EB6DB900A4BF6A /* Extensions */ = {
@@ -718,10 +722,10 @@
 		4867C6FBB8FE1F8F05A5B654 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */,
-				6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */,
 				7E7F5DA966D78AA10741C162 /* Pods_Database.framework */,
 				30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */,
+				38418A69CF3EE8E87A47ADA0 /* Pods_Recipes.framework */,
+				C5428717627A3D23B50AE489 /* Pods_RecipesTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -737,6 +741,10 @@
 				AAE1BB90803E75A1E19578FD /* Pods-Database.release.xcconfig */,
 				BFF26FB07A542D886BCF533F /* Pods-DatabaseTests.debug.xcconfig */,
 				B2A4C6CE9F0B126BC41CCBCE /* Pods-DatabaseTests.release.xcconfig */,
+				9CC4B0990C7BBDC867B11F52 /* Pods-Recipes.debug.xcconfig */,
+				5248BBFBA54B9A078A09D445 /* Pods-Recipes.release.xcconfig */,
+				FCD5D57495E7212AF3388D51 /* Pods-RecipesTests.debug.xcconfig */,
+				059C8D54257F8D2571A45D41 /* Pods-RecipesTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -771,9 +779,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1844BBB423EB6C5000A4BF6A /* Recipies */ = {
+		1844BBB423EB6C5000A4BF6A /* Recipes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1844BBD423EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "Recipies" */;
+			buildConfigurationList = 1844BBD423EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "Recipes" */;
 			buildPhases = (
 				38B3AB05BBEA89EE90E3EE83 /* [CP] Check Pods Manifest.lock */,
 				1844BBB123EB6C5000A4BF6A /* Sources */,
@@ -789,14 +797,14 @@
 				187E129C23EEA31300B544F3 /* PBXTargetDependency */,
 				187E12E923EF0BA700B544F3 /* PBXTargetDependency */,
 			);
-			name = Recipies;
+			name = Recipes;
 			productName = Recipies;
-			productReference = 1844BBB523EB6C5000A4BF6A /* Recipies.app */;
+			productReference = 1844BBB523EB6C5000A4BF6A /* Recipes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1844BBCA23EB6C5300A4BF6A /* RecipiesTests */ = {
+		1844BBCA23EB6C5300A4BF6A /* RecipesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1844BBD723EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "RecipiesTests" */;
+			buildConfigurationList = 1844BBD723EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "RecipesTests" */;
 			buildPhases = (
 				93DA376B5CAC77993A7E8DA8 /* [CP] Check Pods Manifest.lock */,
 				1844BBC723EB6C5300A4BF6A /* Sources */,
@@ -808,9 +816,9 @@
 			dependencies = (
 				1844BBCD23EB6C5300A4BF6A /* PBXTargetDependency */,
 			);
-			name = RecipiesTests;
+			name = RecipesTests;
 			productName = RecipiesTests;
-			productReference = 1844BBCB23EB6C5300A4BF6A /* RecipiesTests.xctest */;
+			productReference = 1844BBCB23EB6C5300A4BF6A /* RecipesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		187CBF6723EE12EF001AED72 /* Database */ = {
@@ -969,7 +977,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1844BBB023EB6C5000A4BF6A /* Build configuration list for PBXProject "Recipies" */;
+			buildConfigurationList = 1844BBB023EB6C5000A4BF6A /* Build configuration list for PBXProject "Recipes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -982,8 +990,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1844BBB423EB6C5000A4BF6A /* Recipies */,
-				1844BBCA23EB6C5300A4BF6A /* RecipiesTests */,
+				1844BBB423EB6C5000A4BF6A /* Recipes */,
+				1844BBCA23EB6C5300A4BF6A /* RecipesTests */,
 				187CBF6723EE12EF001AED72 /* Database */,
 				187CBF6F23EE12EF001AED72 /* DatabaseTests */,
 				187E128723EEA31300B544F3 /* Core */,
@@ -1071,15 +1079,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Recipies/Pods-Recipies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Recipes/Pods-Recipes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Recipies/Pods-Recipies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Recipes/Pods-Recipes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recipies/Pods-Recipies-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recipes/Pods-Recipes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		38B3AB05BBEA89EE90E3EE83 /* [CP] Check Pods Manifest.lock */ = {
@@ -1097,7 +1105,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Recipies-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Recipes-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1119,7 +1127,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RecipiesTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RecipesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1271,7 +1279,7 @@
 /* Begin PBXTargetDependency section */
 		1844BBCD23EB6C5300A4BF6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1844BBB423EB6C5000A4BF6A /* Recipies */;
+			target = 1844BBB423EB6C5000A4BF6A /* Recipes */;
 			targetProxy = 1844BBCC23EB6C5300A4BF6A /* PBXContainerItemProxy */;
 		};
 		187CBF7323EE12EF001AED72 /* PBXTargetDependency */ = {
@@ -1281,7 +1289,7 @@
 		};
 		187CBF7523EE12EF001AED72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1844BBB423EB6C5000A4BF6A /* Recipies */;
+			target = 1844BBB423EB6C5000A4BF6A /* Recipes */;
 			targetProxy = 187CBF7423EE12EF001AED72 /* PBXContainerItemProxy */;
 		};
 		187CBF7C23EE12EF001AED72 /* PBXTargetDependency */ = {
@@ -1296,7 +1304,7 @@
 		};
 		187E129523EEA31300B544F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1844BBB423EB6C5000A4BF6A /* Recipies */;
+			target = 1844BBB423EB6C5000A4BF6A /* Recipes */;
 			targetProxy = 187E129423EEA31300B544F3 /* PBXContainerItemProxy */;
 		};
 		187E129C23EEA31300B544F3 /* PBXTargetDependency */ = {
@@ -1316,7 +1324,7 @@
 		};
 		187E12E223EF0BA700B544F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1844BBB423EB6C5000A4BF6A /* Recipies */;
+			target = 1844BBB423EB6C5000A4BF6A /* Recipes */;
 			targetProxy = 187E12E123EF0BA700B544F3 /* PBXContainerItemProxy */;
 		};
 		187E12E923EF0BA700B544F3 /* PBXTargetDependency */ = {
@@ -1459,18 +1467,18 @@
 		};
 		1844BBD523EB6C5300A4BF6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BABABB2A76D94513F5D3B7AC /* Pods-Recipies.debug.xcconfig */;
+			baseConfigurationReference = 9CC4B0990C7BBDC867B11F52 /* Pods-Recipes.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = Recipies/Info.plist;
+				INFOPLIST_FILE = Recipes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.Recipies;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.Recipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1479,18 +1487,18 @@
 		};
 		1844BBD623EB6C5300A4BF6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4845F00413F1965065B2F126 /* Pods-Recipies.release.xcconfig */;
+			baseConfigurationReference = 5248BBFBA54B9A078A09D445 /* Pods-Recipes.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = Recipies/Info.plist;
+				INFOPLIST_FILE = Recipes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.Recipies;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.Recipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1499,47 +1507,47 @@
 		};
 		1844BBD823EB6C5300A4BF6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */;
+			baseConfigurationReference = FCD5D57495E7212AF3388D51 /* Pods-RecipesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = RecipiesTests/Info.plist;
+				INFOPLIST_FILE = RecipesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.RecipiesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.RecipesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Debug;
 		};
 		1844BBD923EB6C5300A4BF6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */;
+			baseConfigurationReference = 059C8D54257F8D2571A45D41 /* Pods-RecipesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TXH9ALPT83;
-				INFOPLIST_FILE = RecipiesTests/Info.plist;
+				INFOPLIST_FILE = RecipesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.RecipiesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = aaronmhr.RecipesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Release;
 		};
@@ -1619,7 +1627,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Debug;
 		};
@@ -1640,7 +1648,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Release;
 		};
@@ -1714,7 +1722,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Debug;
 		};
@@ -1734,7 +1742,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Release;
 		};
@@ -1808,7 +1816,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Debug;
 		};
@@ -1828,14 +1836,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipies.app/Recipies";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipes.app/Recipes";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1844BBB023EB6C5000A4BF6A /* Build configuration list for PBXProject "Recipies" */ = {
+		1844BBB023EB6C5000A4BF6A /* Build configuration list for PBXProject "Recipes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1844BBD223EB6C5300A4BF6A /* Debug */,
@@ -1844,7 +1852,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1844BBD423EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "Recipies" */ = {
+		1844BBD423EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "Recipes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1844BBD523EB6C5300A4BF6A /* Debug */,
@@ -1853,7 +1861,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1844BBD723EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "RecipiesTests" */ = {
+		1844BBD723EB6C5300A4BF6A /* Build configuration list for PBXNativeTarget "RecipesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1844BBD823EB6C5300A4BF6A /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  MockingRecipeRepository.swift
-//  Recipies
+//  Recipes
 //
 //  Created by Aaron Huánuco on 05/02/2020.
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
@@ -10,11 +10,11 @@ import Core
 
 public final class MockingRecipeRepository: RecipeRepository {
     public init () { }
-    public func getRecipies(for text: String, page: Int, completion: @escaping (Result<[Recipe], RepositoryError>) -> Void) {
+    public func getRecipes(for text: String, page: Int, completion: @escaping (Result<[Recipe], RepositoryError>) -> Void) {
         do {
             let response: ResponseModel = try ResponseModel.readJSONFrom(from: "test" + "\(page)")
-            let recipies = response.results?.compactMap(RecipeResponse.makeRecipe) ?? []
-            completion(.success(recipies))
+            let Recipes = response.results?.compactMap(RecipeResponse.makeRecipe) ?? []
+            completion(.success(Recipes))
         } catch {
             completion(.failure(.fileReading))
         }
