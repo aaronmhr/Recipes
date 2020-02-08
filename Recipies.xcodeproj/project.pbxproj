@@ -60,6 +60,8 @@
 		187E12C523EEB79700B544F3 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12BE23EEB79700B544F3 /* FavoritesInteractor.swift */; };
 		187E12C623EEB79700B544F3 /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12C023EEB79700B544F3 /* FavoritesRouter.swift */; };
 		187E12C923EEC52500B544F3 /* SaveFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12C823EEC52500B544F3 /* SaveFavoriteInteractor.swift */; };
+		187E12CC23EECD8900B544F3 /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187E12CB23EECD8900B544F3 /* FavoriteCell.xib */; };
+		187E12CF23EEDB3000B544F3 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12CE23EEDB3000B544F3 /* FavoriteCell.swift */; };
 		4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */; };
 		940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */; };
 		C65A764E8A8273D4157DB5E2 /* Pods_DatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */; };
@@ -200,6 +202,8 @@
 		187E12BE23EEB79700B544F3 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		187E12C023EEB79700B544F3 /* FavoritesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
 		187E12C823EEC52500B544F3 /* SaveFavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoriteInteractor.swift; sourceTree = "<group>"; };
+		187E12CB23EECD8900B544F3 /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
+		187E12CE23EEDB3000B544F3 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -593,6 +597,7 @@
 		187E12B823EEB79700B544F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				187E12CA23EECD6A00B544F3 /* Cells */,
 				187E12B923EEB79700B544F3 /* FavoritesViewController.swift */,
 				187E12BA23EEB79700B544F3 /* Favorites.storyboard */,
 			);
@@ -621,6 +626,15 @@
 				187E12C023EEB79700B544F3 /* FavoritesRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		187E12CA23EECD6A00B544F3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				187E12CB23EECD8900B544F3 /* FavoriteCell.xib */,
+				187E12CE23EEDB3000B544F3 /* FavoriteCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4867C6FBB8FE1F8F05A5B654 /* Frameworks */ = {
@@ -856,6 +870,7 @@
 				187367A523EDEB6C0094483D /* Detail.storyboard in Resources */,
 				1873678E23ED32560094483D /* test3.json in Resources */,
 				187E12C323EEB79700B544F3 /* Favorites.storyboard in Resources */,
+				187E12CC23EECD8900B544F3 /* FavoriteCell.xib in Resources */,
 				1844BC1C23EB84DF00A4BF6A /* RecipeCell.xib in Resources */,
 				1873679023ED32560094483D /* test2.json in Resources */,
 				1844BC0023EB6EAD00A4BF6A /* List.storyboard in Resources */,
@@ -1027,6 +1042,7 @@
 				187E12C123EEB79700B544F3 /* FavoritesPresenter.swift in Sources */,
 				187E12C423EEB79700B544F3 /* FavoritesProtocols.swift in Sources */,
 				187E12C623EEB79700B544F3 /* FavoritesRouter.swift in Sources */,
+				187E12CF23EEDB3000B544F3 /* FavoriteCell.swift in Sources */,
 				1844BC0A23EB70F000A4BF6A /* RecipeRepository.swift in Sources */,
 				1844BBFF23EB6EAD00A4BF6A /* ListViewController.swift in Sources */,
 				187E12C923EEC52500B544F3 /* SaveFavoriteInteractor.swift in Sources */,
