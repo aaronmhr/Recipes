@@ -37,7 +37,7 @@ public final class RealmService: DatabaseServiceProtocol {
         case .success(let realm):
             do {
                 try realm.write {
-                    realm.add(object)
+                    realm.add(object, update: .modified)
                 }
             } catch {
                 throw RealmServiceError.creatingObjectError

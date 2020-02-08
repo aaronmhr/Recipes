@@ -14,12 +14,17 @@ final class RealmRecipe: Object {
     @objc dynamic var  ingredients: String = ""
     @objc dynamic var  url: Data = Data()
     @objc dynamic var  thumbnail: Data = Data()
+    
+    override static func primaryKey() -> String? {
+        return "name"
+    }
 }
 
 extension RealmRecipe {
     static func make(with recipe: Recipe) -> RealmRecipe {
         let realmRecipe = RealmRecipe()
         realmRecipe.name = recipe.name
+        realmRecipe.ingredients = recipe.ingredients
         realmRecipe.url = recipe.url.dataRepresentation
         realmRecipe.thumbnail = recipe.thumbnail.dataRepresentation
         return realmRecipe
