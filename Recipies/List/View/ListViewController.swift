@@ -33,6 +33,11 @@ final class ListViewController: UIViewController {
     }
     
     private func setupSearchBar() {
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(
+            title: "Favorites",
+            style: .done,
+            target: self,
+            action: #selector(favoritesButtonDidTap))]
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         searchController.obscuresBackgroundDuringPresentation = false
@@ -45,6 +50,10 @@ final class ListViewController: UIViewController {
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: collectionView.frame.width, height: 250)
         }
+    }
+    
+    @objc private func favoritesButtonDidTap() {
+        presenter.favoritesDidTap()
     }
 }
 

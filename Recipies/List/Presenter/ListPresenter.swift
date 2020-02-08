@@ -47,6 +47,10 @@ extension ListPresenter: ListPresenterProtocol {
         let recipe = interactor.recipes[index]
         router.showRecipe(title: recipe.name, url: recipe.url, animated: true)
     }
+    
+    func favoritesDidTap() {
+        router.showFavorites(animated: true)
+    }
 }
 
 extension ListPresenter {

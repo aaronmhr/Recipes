@@ -20,6 +20,7 @@ protocol SearchFormatterInteractorProtocol {
 
 protocol ListRouterProtocol {
     func showRecipe(title: String, url: URL, animated: Bool)
+    func showFavorites(animated: Bool)
 }
 
 protocol ListPresenterProtocol {
@@ -27,6 +28,7 @@ protocol ListPresenterProtocol {
     func attemptSearch(for text: String)
     func getMoreRecipes()
     func didSelectItemAt(_ index: Int)
+    func favoritesDidTap()
 }
 
 protocol ListViewProtocol: class {
