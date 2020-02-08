@@ -9,34 +9,57 @@
 import RealmSwift
 
 public final class RealmService {
-    private let realm: Realm
+    private let configuration: Realm.Configuration
     
-    public init(realm: Realm = try! Realm()) {
-        self.realm = realm
+    public init(configuration: Realm.Configuration = .defaultConfiguration) {
+        self.configuration = configuration
     }
     
-    public func read<T: Object>(_ objectType: T.Type) -> Results<T> {
-        return realm.objects(objectType)
+    private var realmResult: Result<Realm,RealmServiceError> {
+        do {
+            return try .success(Realm(configuration: configuration))
+        } catch {
+            return .failure(.nonAccessibleRealm)
+        }
+    }
+    
+    public func read<T: Object>(_ objectType: T.Type) throws -> Results<T> {
+        switch realmResult {
+        case .success(let realm):
+            return realm.objects(objectType)
+        case .failure(let error):
+            throw error
+        }
     }
     
     public func create<T: Object>(_ object: T) throws {
-        do {
-            try realm.write {
-                realm.add(object)
+        switch realmResult {
+        case .success(let realm):
+            do {
+                try realm.write {
+                    realm.add(object)
+                }
+            } catch {
+                throw RealmServiceError.creatingObjectError
             }
-        } catch {
-            throw RealmServiceError.createError
+        case .failure(let error):
+            throw error
         }
     }
 
     public func delete<T: Object>(_ type: T.Type) throws {
-        do {
-            try realm.write {
-                let objects = realm.objects(type)
-                realm.delete(objects)
+        switch realmResult {
+        case .success(let realm):
+            do {
+                try realm.write {
+                    let objects = realm.objects(type)
+                    realm.delete(objects)
+                }
+            } catch {
+                throw RealmServiceError.deletingObjectError
             }
-        } catch {
-            throw RealmServiceError.deleteError
+        case .failure(let error):
+            throw error
         }
     }
 }

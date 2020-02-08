@@ -7,19 +7,22 @@
 //
 
 public enum RealmServiceError: Error {
-    case createError
-    case deleteError
-    case noObjectSavedError
+    case nonAccessibleRealm
+    case creatingObjectError
+    case deletingObjectError
+    case notFoundObjectError
 }
 
 extension RealmServiceError: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .createError:
+        case .nonAccessibleRealm:
+            return "Could not access Realm"
+        case .creatingObjectError:
             return "Could not save on database"
-        case .deleteError:
+        case .deletingObjectError:
             return "Could not delete from database"
-        case .noObjectSavedError:
+        case .notFoundObjectError:
             return "Could not find or read saved object"
         }
     }
