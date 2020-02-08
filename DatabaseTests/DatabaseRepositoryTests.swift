@@ -12,15 +12,24 @@ import RealmSwift
 @testable import Database
 
 class DatabaseRepositoryTests: XCTestCase {
-    
     func testAddFavoriteSavesRealmRecipeWhenRecipeIsGiven() {
-        let service = SavingServiceSpy()
+        let service = SavingServiceSpy(shouldThrow: false)
         let sut = makeSUT(service: service)
         let recipe = makeRecipe(name: "0")
         
         try! sut.addFavorite(recipe)
         
         XCTAssertNotNil(service.savedObject)
+        XCTAssertTrue(service.savedObject is RealmRecipe)
+        XCTAssertEqual((service.savedObject as! RealmRecipe).name, "0")
+    }
+    
+    func testAddFavoriteDatabaseRepositoryErrorWhenDatabaseServiceProtocolFails() {
+        let service = SavingServiceSpy(shouldThrow: true)
+        let sut = makeSUT(service: service)
+        let recipe = makeRecipe(name: "0")
+        XCTAssertThrowsError((try sut.addFavorite(recipe)) as! DatabaseRepositoryError)
+        XCTAssertNil(service.savedObject)
     }
 
     private func makeSUT(service: DatabaseServiceProtocol) -> DatabaseRepository {
@@ -36,8 +45,35 @@ class DatabaseRepositoryTests: XCTestCase {
         static let url = URL(string: "https://a-url.com")!
     }
 }
+struct DummyError: Error { }
 
 private class SavingServiceSpy: DatabaseServiceProtocol {
+    private var shouldThrow: Bool
+
+    
+    var savedObject: Object?
+    
+    init(shouldThrow: Bool) {
+        self.shouldThrow = shouldThrow
+    }
+    
+    func save<T: Object>(_ object: T) throws {
+        if shouldThrow {
+            throw DummyError()
+        } else {
+            savedObject = object
+        }
+    }
+    
+    func read<T: Object>(_ objectType: T.Type) throws -> Results<T> {
+        fatalError()
+    }
+    func delete<T: Object>(_ object: T) throws {
+        fatalError()
+    }
+}
+
+private class ReadingServiceSpy: DatabaseServiceProtocol {
     var savedObject: Object?
     
     func save<T: Object>(_ object: T) throws {
@@ -49,5 +85,20 @@ private class SavingServiceSpy: DatabaseServiceProtocol {
     }
     func delete<T: Object>(_ object: T) throws {
         fatalError()
+    }
+}
+
+private class DeletingServiceSpy: DatabaseServiceProtocol {
+    var savedObject: Object?
+    
+    func save<T: Object>(_ object: T) throws {
+        
+    }
+    
+    func read<T: Object>(_ objectType: T.Type) throws -> Results<T> {
+        fatalError()
+    }
+    func delete<T: Object>(_ object: T) throws {
+        savedObject = object
     }
 }
