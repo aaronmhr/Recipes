@@ -15,10 +15,11 @@ final class FavoriteCell: UITableViewCell, NibReusable {
     @IBOutlet private var ingredientsLabel: UILabel!
     @IBOutlet private var hasLactoseLabel: UILabel!
     
-    func configure(with viewModel: RecipeViewModel, delegate: FavoritesSelectorDelegate, index: Int) {
+    func configure(with viewModel: RecipeViewModel) {
         recipeImage.kf.setImage(with: viewModel.image, placeholder: #imageLiteral(resourceName: "placeholder"))
         titleLabel.text = viewModel.name
         ingredientsLabel.text = viewModel.ingredients
+        hasLactoseLabel.text = viewModel.hasLactose
     }
     
     override func prepareForReuse() {

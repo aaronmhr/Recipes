@@ -9,15 +9,43 @@
 import UIKit
 
 final class FavoritesViewController: UIViewController {
+    @IBOutlet private var tableView: UITableView!
     var presenter: FavoritesPresenterProtocol!
-    var recipes: [RecipeViewModel] = []
+    var recipes: [RecipeViewModel] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         presenter.viewDidLoad()
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(cellType: FavoriteCell.self)
     }
 }
 
 extension FavoritesViewController: FavoritesViewProtocol {
 
+}
+
+extension FavoritesViewController: UITableViewDelegate {
+    
+}
+
+extension FavoritesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recipes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: FavoriteCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: recipes[indexPath.row])
+        return cell
+    }
 }

@@ -20,6 +20,7 @@ final class FavoritesPresenter {
 
 extension FavoritesPresenter: FavoritesPresenterProtocol {
     func viewDidLoad() {
-        dump(interactor.recipes)
+        let viewModels = interactor.recipes.map(RecipeViewModel.make)
+        view.recipes = viewModels
     }
 }
