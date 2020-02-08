@@ -11,6 +11,9 @@ import RealmSwift
 @testable import Database
 
 final class RealmServiceTests: XCTestCase {
+    
+    
+    
     private func makeSUT() -> RealmService {
         let configuration = Realm.Configuration(inMemoryIdentifier: "TEST")
         return RealmService(configuration: configuration)
@@ -19,7 +22,10 @@ final class RealmServiceTests: XCTestCase {
     private enum Constants {
         static let url = URL(string: "https://a-url.com")!
         static let data = url.dataRepresentation
-        static let recipe = RealmRecipe(name: "Test1", ingredients: "1, 1, 1", url: data, thumbnail: data)
+    }
+    
+    private func makeTestingRealmRecipe(number: Int) -> RealmRecipe {
+        return .init(name: "\(number)", ingredients: "\(number), \(number), \(number)", url: Constants.data, thumbnail: Constants.data)
     }
 }
 
