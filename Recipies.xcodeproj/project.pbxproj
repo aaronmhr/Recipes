@@ -50,6 +50,9 @@
 		187E129D23EEA31300B544F3 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E128823EEA31300B544F3 /* Core.framework */; };
 		187E129E23EEA31300B544F3 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187E128823EEA31300B544F3 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187E12A523EEA3C700B544F3 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC0C23EB712C00A4BF6A /* Recipe.swift */; };
+		187E12AB23EEA63F00B544F3 /* DatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12AA23EEA63F00B544F3 /* DatabaseRepository.swift */; };
+		187E12AF23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12AE23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift */; };
+		187E12B123EEAC6400B544F3 /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12AC23EEA7A800B544F3 /* DatabaseServiceProtocol.swift */; };
 		4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */; };
 		940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */; };
 		C65A764E8A8273D4157DB5E2 /* Pods_DatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */; };
@@ -180,6 +183,9 @@
 		187E129023EEA31300B544F3 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E129723EEA31300B544F3 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		187E129923EEA31300B544F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187E12AA23EEA63F00B544F3 /* DatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepository.swift; sourceTree = "<group>"; };
+		187E12AC23EEA7A800B544F3 /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
+		187E12AE23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepositoryProtocol.swift; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -396,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				1844BC0C23EB712C00A4BF6A /* Recipe.swift */,
+				187E12B023EEA94000B544F3 /* Database */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -484,6 +491,7 @@
 		187CBF6923EE12EF001AED72 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				187E12AA23EEA63F00B544F3 /* DatabaseRepository.swift */,
 				187E12A823EEA5D600B544F3 /* Models */,
 				187E12A923EEA5E400B544F3 /* RealmService */,
 				187CBF6A23EE12EF001AED72 /* Database.h */,
@@ -532,9 +540,18 @@
 			isa = PBXGroup;
 			children = (
 				187CBF8823EE148E001AED72 /* RealmService.swift */,
+				187E12AC23EEA7A800B544F3 /* DatabaseServiceProtocol.swift */,
 				187CBF8A23EE14C8001AED72 /* RealmServiceError.swift */,
 			);
 			path = RealmService;
+			sourceTree = "<group>";
+		};
+		187E12B023EEA94000B544F3 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				187E12AE23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		4867C6FBB8FE1F8F05A5B654 /* Frameworks */ = {
@@ -961,7 +978,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E12AB23EEA63F00B544F3 /* DatabaseRepository.swift in Sources */,
 				187CBF8B23EE14C8001AED72 /* RealmServiceError.swift in Sources */,
+				187E12B123EEAC6400B544F3 /* DatabaseServiceProtocol.swift in Sources */,
 				187E128223EEA17800B544F3 /* RealmRecipe.swift in Sources */,
 				187CBF8923EE148E001AED72 /* RealmService.swift in Sources */,
 			);
@@ -979,6 +998,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E12AF23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift in Sources */,
 				187E12A523EEA3C700B544F3 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
