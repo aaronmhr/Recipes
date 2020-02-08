@@ -25,3 +25,13 @@ extension RealmRecipe {
         return realmRecipe
     }
 }
+
+extension RealmRecipe {
+    static func makeRecipe(_ recipe: RealmRecipe) -> Recipe? {
+        guard let url = URL(dataRepresentation: recipe.url, relativeTo: nil),
+            let thumbnail = URL(dataRepresentation: recipe.thumbnail, relativeTo: nil) else {
+                return nil
+        }
+        return Recipe(name: recipe.name, ingredients: recipe.ingredients, url: url, thumbnail: thumbnail)
+    }
+}
