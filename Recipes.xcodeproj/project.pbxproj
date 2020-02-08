@@ -30,7 +30,7 @@
 		187367A823EDEB6C0094483D /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187367A123EDEB6C0094483D /* DetailInteractor.swift */; };
 		187367A923EDEB6C0094483D /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187367A323EDEB6C0094483D /* DetailRouter.swift */; };
 		187CBF7123EE12EF001AED72 /* Database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187CBF6823EE12EF001AED72 /* Database.framework */; };
-		187CBF7823EE12EF001AED72 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CBF7723EE12EF001AED72 /* DatabaseTests.swift */; };
+		187CBF7823EE12EF001AED72 /* DatabaseRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CBF7723EE12EF001AED72 /* DatabaseRepositoryTests.swift */; };
 		187CBF7A23EE12EF001AED72 /* Database.h in Headers */ = {isa = PBXBuildFile; fileRef = 187CBF6A23EE12EF001AED72 /* Database.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		187CBF7D23EE12EF001AED72 /* Database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187CBF6823EE12EF001AED72 /* Database.framework */; };
 		187CBF7E23EE12EF001AED72 /* Database.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187CBF6823EE12EF001AED72 /* Database.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -217,7 +217,7 @@
 		187CBF6A23EE12EF001AED72 /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		187CBF6B23EE12EF001AED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187CBF7023EE12EF001AED72 /* DatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		187CBF7723EE12EF001AED72 /* DatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
+		187CBF7723EE12EF001AED72 /* DatabaseRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepositoryTests.swift; sourceTree = "<group>"; };
 		187CBF7923EE12EF001AED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187CBF8823EE148E001AED72 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		187CBF8A23EE14C8001AED72 /* RealmServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceError.swift; sourceTree = "<group>"; };
@@ -580,7 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				187E12FD23EF28A300B544F3 /* RealmService */,
-				187CBF7723EE12EF001AED72 /* DatabaseTests.swift */,
+				187CBF7723EE12EF001AED72 /* DatabaseRepositoryTests.swift */,
 				187CBF7923EE12EF001AED72 /* Info.plist */,
 			);
 			path = DatabaseTests;
@@ -1246,7 +1246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187CBF7823EE12EF001AED72 /* DatabaseTests.swift in Sources */,
+				187CBF7823EE12EF001AED72 /* DatabaseRepositoryTests.swift in Sources */,
 				187E12FF23EF28B300B544F3 /* RealmServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
