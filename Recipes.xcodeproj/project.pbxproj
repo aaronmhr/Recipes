@@ -10,7 +10,7 @@
 		1844BBB923EB6C5000A4BF6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBB823EB6C5000A4BF6A /* AppDelegate.swift */; };
 		1844BBC223EB6C5300A4BF6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1844BBC123EB6C5300A4BF6A /* Assets.xcassets */; };
 		1844BBC523EB6C5300A4BF6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1844BBC323EB6C5300A4BF6A /* LaunchScreen.storyboard */; };
-		1844BBD023EB6C5300A4BF6A /* RecipiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBCF23EB6C5300A4BF6A /* RecipiesTests.swift */; };
+		1844BBD023EB6C5300A4BF6A /* ListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBCF23EB6C5300A4BF6A /* ListInteractorTests.swift */; };
 		1844BBF123EB6DD000A4BF6A /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBF023EB6DD000A4BF6A /* StoryboardHelper.swift */; };
 		1844BBFE23EB6EAD00A4BF6A /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBF423EB6EAD00A4BF6A /* ListPresenter.swift */; };
 		1844BBFF23EB6EAD00A4BF6A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BBF623EB6EAD00A4BF6A /* ListViewController.swift */; };
@@ -185,7 +185,7 @@
 		1844BBC423EB6C5300A4BF6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1844BBC623EB6C5300A4BF6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1844BBCB23EB6C5300A4BF6A /* RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1844BBCF23EB6C5300A4BF6A /* RecipiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesTests.swift; sourceTree = "<group>"; };
+		1844BBCF23EB6C5300A4BF6A /* ListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorTests.swift; sourceTree = "<group>"; };
 		1844BBD123EB6C5300A4BF6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1844BBF023EB6DD000A4BF6A /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		1844BBF423EB6EAD00A4BF6A /* ListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
@@ -384,7 +384,7 @@
 		1844BBCE23EB6C5300A4BF6A /* RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
-				1844BBCF23EB6C5300A4BF6A /* RecipiesTests.swift */,
+				187E130023EF609000B544F3 /* List */,
 				1844BBD123EB6C5300A4BF6A /* Info.plist */,
 			);
 			path = RecipesTests;
@@ -728,6 +728,14 @@
 				187E12FE23EF28B300B544F3 /* RealmServiceTests.swift */,
 			);
 			path = RealmService;
+			sourceTree = "<group>";
+		};
+		187E130023EF609000B544F3 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1844BBCF23EB6C5300A4BF6A /* ListInteractorTests.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		4867C6FBB8FE1F8F05A5B654 /* Frameworks */ = {
@@ -1226,7 +1234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1844BBD023EB6C5300A4BF6A /* RecipiesTests.swift in Sources */,
+				1844BBD023EB6C5300A4BF6A /* ListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

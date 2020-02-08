@@ -22,7 +22,7 @@ public struct Recipe {
     }
 }
 
-extension Recipe {
+extension Recipe: Equatable {
     public var hasLactose: Bool {
         return ingredients.lowercased().contains("milk") || ingredients.lowercased().contains("cheese")
     }
