@@ -14,8 +14,12 @@ protocol ListInteractorProtocol {
     func getMoreRecipes()
 }
 
-protocol SearchFormatterInteractorProtocol {
+protocol SearchingFormatterInteractor {
     func format(_ searchText: String) -> String
+}
+
+protocol FavoriteSavingInteractor {
+    func save(recipe: Recipe)
 }
 
 protocol ListRouterProtocol {
@@ -29,6 +33,7 @@ protocol ListPresenterProtocol {
     func getMoreRecipes()
     func didSelectItemAt(_ index: Int)
     func favoritesDidTap()
+    func makeFavoriteAtIndex(_ index: Int)
 }
 
 protocol ListViewProtocol: class {

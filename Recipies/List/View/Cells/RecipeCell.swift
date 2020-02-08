@@ -16,6 +16,9 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
     @IBOutlet private var ingredientsLabel: UILabel!
     @IBOutlet private var hasLactoseLabel: UILabel!
     
+    private var index = 0
+    private weak var delegate: FavoritesSelectorDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         addShadowToCell()
@@ -34,7 +37,9 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
         return layoutAttributes
     }
     
-    func configure(with viewModel: RecipeViewModel) {
+    func configure(with viewModel: RecipeViewModel, delegate: FavoritesSelectorDelegate, index: Int) {
+        self.delegate = delegate
+        self.index = index
         recipeImage.kf.setImage(with: viewModel.image, placeholder: #imageLiteral(resourceName: "placeholder"))
         titleLabel.text = viewModel.name
         ingredientsLabel.text = viewModel.ingredients
@@ -55,5 +60,10 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
     
     private func configureHasLactoseLabel() {
         hasLactoseLabel.transform = CGAffineTransform(rotationAngle: 45 * CGFloat.pi / 180)
+    }
+    
+    
+    @IBAction func favoritesButtonTapped(_ sender: UIButton) {
+        delegate?.didSelectFavoriteAtIndex(index)
     }
 }

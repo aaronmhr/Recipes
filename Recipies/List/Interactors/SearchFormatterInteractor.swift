@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class SearchFormatterInteractor: SearchFormatterInteractorProtocol {
+final class SearchFormatterInteractor: SearchingFormatterInteractor {
     func format(_ searchText: String) -> String {
         let commaRemoved = searchText.replacingOccurrences(of: "[0-9/*+-]", with: " ", options: .regularExpression, range: nil)
         let spacesRemoved = commaRemoved.replacingOccurrences(of: "[\\s\n]+", with: ",", options: .regularExpression, range: nil)

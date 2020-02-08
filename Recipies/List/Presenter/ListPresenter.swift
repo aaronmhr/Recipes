@@ -9,13 +9,15 @@
 final class ListPresenter {
     let router: ListRouterProtocol
     let interactor: ListInteractorProtocol
-    let formatterInteractor: SearchFormatterInteractorProtocol
+    let formatterInteractor: SearchingFormatterInteractor
+    let savingInteractor: FavoriteSavingInteractor
     weak var view: ListViewProtocol!
 
-    init(withView view: ListViewProtocol, interactor: ListInteractorProtocol, formatterInteractor: SearchFormatterInteractorProtocol, router: ListRouterProtocol) {
+    init(withView view: ListViewProtocol, interactor: ListInteractorProtocol, formatterInteractor: SearchingFormatterInteractor, savingInteractor: FavoriteSavingInteractor, router: ListRouterProtocol) {
         self.view = view
         self.interactor = interactor
         self.formatterInteractor = formatterInteractor
+        self.savingInteractor = savingInteractor
         self.router = router
     }
 }
@@ -50,6 +52,11 @@ extension ListPresenter: ListPresenterProtocol {
     
     func favoritesDidTap() {
         router.showFavorites(animated: true)
+    }
+    
+    func makeFavoriteAtIndex(_ index: Int) {
+        guard interactor.recipes.indices.contains(index) else { return }
+        savingInteractor.save(recipe: interactor.recipes[index])
     }
 }
 

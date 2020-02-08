@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FavoritesSelectorDelegate: class {
+    func didSelectFavoriteAtIndex(_ index: Int)
+}
+
 final class ListViewController: UIViewController {
     var presenter: ListPresenterProtocol!
     @IBOutlet private var collectionView: UICollectionView!
@@ -91,7 +95,7 @@ extension ListViewController: UICollectionViewDelegate {
 extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: RecipeCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: recipes[indexPath.row])
+        cell.configure(with: recipes[indexPath.row], delegate: self, index: indexPath.row)
         return cell
     }
     
@@ -103,5 +107,11 @@ extension ListViewController: UICollectionViewDataSource {
 extension ListViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 10, left: 0, bottom: 20, right: 0)
+    }
+}
+
+extension ListViewController: FavoritesSelectorDelegate {
+    func didSelectFavoriteAtIndex(_ index: Int) {
+        presenter.makeFavoriteAtIndex(index)
     }
 }

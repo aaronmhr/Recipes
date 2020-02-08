@@ -59,6 +59,7 @@
 		187E12C423EEB79700B544F3 /* FavoritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12BC23EEB79700B544F3 /* FavoritesProtocols.swift */; };
 		187E12C523EEB79700B544F3 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12BE23EEB79700B544F3 /* FavoritesInteractor.swift */; };
 		187E12C623EEB79700B544F3 /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12C023EEB79700B544F3 /* FavoritesRouter.swift */; };
+		187E12C923EEC52500B544F3 /* SaveFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12C823EEC52500B544F3 /* SaveFavoriteInteractor.swift */; };
 		4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */; };
 		940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */; };
 		C65A764E8A8273D4157DB5E2 /* Pods_DatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */; };
@@ -198,6 +199,7 @@
 		187E12BC23EEB79700B544F3 /* FavoritesProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesProtocols.swift; sourceTree = "<group>"; };
 		187E12BE23EEB79700B544F3 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		187E12C023EEB79700B544F3 /* FavoritesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
+		187E12C823EEC52500B544F3 /* SaveFavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoriteInteractor.swift; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				1844BBFB23EB6EAD00A4BF6A /* ListInteractor.swift */,
 				1873679223EDE32A0094483D /* SearchFormatterInteractor.swift */,
+				187E12C823EEC52500B544F3 /* SaveFavoriteInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -1026,6 +1029,7 @@
 				187E12C623EEB79700B544F3 /* FavoritesRouter.swift in Sources */,
 				1844BC0A23EB70F000A4BF6A /* RecipeRepository.swift in Sources */,
 				1844BBFF23EB6EAD00A4BF6A /* ListViewController.swift in Sources */,
+				187E12C923EEC52500B544F3 /* SaveFavoriteInteractor.swift in Sources */,
 				187367A723EDEB6C0094483D /* DetailProtocols.swift in Sources */,
 				1844BC2023EB856200A4BF6A /* NibReusable.swift in Sources */,
 				1844BC0123EB6EAD00A4BF6A /* ListProtocols.swift in Sources */,

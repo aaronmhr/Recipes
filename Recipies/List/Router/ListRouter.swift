@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Database
 
 final class ListRouter: StoryboardInstantiator {
     weak var view: ListViewController!
@@ -23,7 +24,10 @@ final class ListRouter: StoryboardInstantiator {
         
         let interactor = ListInteractor(with: repository)
         let formatterInteractor = SearchFormatterInteractor()
-        let presenter = ListPresenter(withView: viewController, interactor: interactor, formatterInteractor: formatterInteractor, router: router)
+        let databaseService = RealmService()
+        let databaseRepository = DatabaseRepository(service: databaseService)
+        let savingFavoriteInteractor = SaveFavoriteInteractor(repository: databaseRepository)
+        let presenter = ListPresenter(withView: viewController, interactor: interactor, formatterInteractor: formatterInteractor, savingInteractor: savingFavoriteInteractor, router: router)
 
         viewController.presenter = presenter
 
