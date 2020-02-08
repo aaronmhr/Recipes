@@ -56,7 +56,7 @@
 		187E12CC23EECD8900B544F3 /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187E12CB23EECD8900B544F3 /* FavoriteCell.xib */; };
 		187E12CF23EEDB3000B544F3 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12CE23EEDB3000B544F3 /* FavoriteCell.swift */; };
 		187E12DE23EF0BA700B544F3 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E12D523EF0BA700B544F3 /* Networking.framework */; };
-		187E12E523EF0BA700B544F3 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12E423EF0BA700B544F3 /* NetworkingTests.swift */; };
+		187E12E523EF0BA700B544F3 /* RecipeResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12E423EF0BA700B544F3 /* RecipeResponseTests.swift */; };
 		187E12E723EF0BA700B544F3 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 187E12D723EF0BA700B544F3 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		187E12EA23EF0BA700B544F3 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E12D523EF0BA700B544F3 /* Networking.framework */; };
 		187E12EB23EF0BA700B544F3 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187E12D523EF0BA700B544F3 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -243,7 +243,7 @@
 		187E12D723EF0BA700B544F3 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		187E12D823EF0BA700B544F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187E12DD23EF0BA700B544F3 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		187E12E423EF0BA700B544F3 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		187E12E423EF0BA700B544F3 /* RecipeResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponseTests.swift; sourceTree = "<group>"; };
 		187E12E623EF0BA700B544F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -705,7 +705,7 @@
 		187E12E323EF0BA700B544F3 /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				187E12E423EF0BA700B544F3 /* NetworkingTests.swift */,
+				187E12E423EF0BA700B544F3 /* RecipeResponseTests.swift */,
 				187E12E623EF0BA700B544F3 /* Info.plist */,
 			);
 			path = NetworkingTests;
@@ -1270,7 +1270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187E12E523EF0BA700B544F3 /* NetworkingTests.swift in Sources */,
+				187E12E523EF0BA700B544F3 /* RecipeResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
