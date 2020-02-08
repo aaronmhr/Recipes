@@ -6,6 +6,8 @@
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
 //
 
+import Core
+
 final class ListInteractor {
     let repository: RecipeRepository
     private var ingredients = ""

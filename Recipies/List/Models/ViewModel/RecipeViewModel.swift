@@ -6,7 +6,7 @@
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
 //
 
-import Foundation
+import Core
 
 struct RecipeViewModel {
     let name: String

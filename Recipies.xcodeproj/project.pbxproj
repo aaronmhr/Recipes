@@ -53,6 +53,12 @@
 		187E12AB23EEA63F00B544F3 /* DatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12AA23EEA63F00B544F3 /* DatabaseRepository.swift */; };
 		187E12AF23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12AE23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift */; };
 		187E12B123EEAC6400B544F3 /* DatabaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12AC23EEA7A800B544F3 /* DatabaseServiceProtocol.swift */; };
+		187E12C123EEB79700B544F3 /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12B723EEB79700B544F3 /* FavoritesPresenter.swift */; };
+		187E12C223EEB79700B544F3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12B923EEB79700B544F3 /* FavoritesViewController.swift */; };
+		187E12C323EEB79700B544F3 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E12BA23EEB79700B544F3 /* Favorites.storyboard */; };
+		187E12C423EEB79700B544F3 /* FavoritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12BC23EEB79700B544F3 /* FavoritesProtocols.swift */; };
+		187E12C523EEB79700B544F3 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12BE23EEB79700B544F3 /* FavoritesInteractor.swift */; };
+		187E12C623EEB79700B544F3 /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12C023EEB79700B544F3 /* FavoritesRouter.swift */; };
 		4D41CAA538FC6287B5D4E52E /* Pods_RecipiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCB34B96B3681CCA014DB3B /* Pods_RecipiesTests.framework */; };
 		940978B141987277B592DA90 /* Pods_Recipies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A3CAF516A2B632BC7D7FF5 /* Pods_Recipies.framework */; };
 		C65A764E8A8273D4157DB5E2 /* Pods_DatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */; };
@@ -186,6 +192,12 @@
 		187E12AA23EEA63F00B544F3 /* DatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepository.swift; sourceTree = "<group>"; };
 		187E12AC23EEA7A800B544F3 /* DatabaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceProtocol.swift; sourceTree = "<group>"; };
 		187E12AE23EEA92700B544F3 /* DatabaseRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepositoryProtocol.swift; sourceTree = "<group>"; };
+		187E12B723EEB79700B544F3 /* FavoritesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		187E12B923EEB79700B544F3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		187E12BA23EEB79700B544F3 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		187E12BC23EEB79700B544F3 /* FavoritesProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesProtocols.swift; sourceTree = "<group>"; };
+		187E12BE23EEB79700B544F3 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
+		187E12C023EEB79700B544F3 /* FavoritesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA19074D46257017BBA39 /* Pods-RecipiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.release.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -285,6 +297,7 @@
 		1844BBB723EB6C5000A4BF6A /* Recipies */ = {
 			isa = PBXGroup;
 			children = (
+				187E12B523EEB79700B544F3 /* Favorites */,
 				1844BC0823EB70DC00A4BF6A /* RecipeRepository */,
 				1844BBF223EB6EAD00A4BF6A /* List */,
 				1873679823EDEB6C0094483D /* Detail */,
@@ -554,6 +567,59 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		187E12B523EEB79700B544F3 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				187E12B623EEB79700B544F3 /* Presenter */,
+				187E12B823EEB79700B544F3 /* View */,
+				187E12BB23EEB79700B544F3 /* Protocols */,
+				187E12BD23EEB79700B544F3 /* Interactor */,
+				187E12BF23EEB79700B544F3 /* Router */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		187E12B623EEB79700B544F3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				187E12B723EEB79700B544F3 /* FavoritesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		187E12B823EEB79700B544F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				187E12B923EEB79700B544F3 /* FavoritesViewController.swift */,
+				187E12BA23EEB79700B544F3 /* Favorites.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187E12BB23EEB79700B544F3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				187E12BC23EEB79700B544F3 /* FavoritesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		187E12BD23EEB79700B544F3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				187E12BE23EEB79700B544F3 /* FavoritesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		187E12BF23EEB79700B544F3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				187E12C023EEB79700B544F3 /* FavoritesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		4867C6FBB8FE1F8F05A5B654 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,6 +852,7 @@
 				1844BBC523EB6C5300A4BF6A /* LaunchScreen.storyboard in Resources */,
 				187367A523EDEB6C0094483D /* Detail.storyboard in Resources */,
 				1873678E23ED32560094483D /* test3.json in Resources */,
+				187E12C323EEB79700B544F3 /* Favorites.storyboard in Resources */,
 				1844BC1C23EB84DF00A4BF6A /* RecipeCell.xib in Resources */,
 				1873679023ED32560094483D /* test2.json in Resources */,
 				1844BC0023EB6EAD00A4BF6A /* List.storyboard in Resources */,
@@ -954,11 +1021,16 @@
 				1844BC1723EB7A2500A4BF6A /* RecipeViewModel.swift in Sources */,
 				187367A823EDEB6C0094483D /* DetailInteractor.swift in Sources */,
 				1844BC1123EB731500A4BF6A /* MockingRecipeRepository.swift in Sources */,
+				187E12C123EEB79700B544F3 /* FavoritesPresenter.swift in Sources */,
+				187E12C423EEB79700B544F3 /* FavoritesProtocols.swift in Sources */,
+				187E12C623EEB79700B544F3 /* FavoritesRouter.swift in Sources */,
 				1844BC0A23EB70F000A4BF6A /* RecipeRepository.swift in Sources */,
 				1844BBFF23EB6EAD00A4BF6A /* ListViewController.swift in Sources */,
 				187367A723EDEB6C0094483D /* DetailProtocols.swift in Sources */,
 				1844BC2023EB856200A4BF6A /* NibReusable.swift in Sources */,
 				1844BC0123EB6EAD00A4BF6A /* ListProtocols.swift in Sources */,
+				187E12C223EEB79700B544F3 /* FavoritesViewController.swift in Sources */,
+				187E12C523EEB79700B544F3 /* FavoritesInteractor.swift in Sources */,
 				187367A423EDEB6C0094483D /* DetailPresenter.swift in Sources */,
 				1844BC0723EB701900A4BF6A /* RecipeResponse.swift in Sources */,
 				1844BBF123EB6DD000A4BF6A /* StoryboardHelper.swift in Sources */,
