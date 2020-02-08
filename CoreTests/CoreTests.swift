@@ -1,34 +1,44 @@
 //
-//  CoreTests.swift
-//  CoreTests
+//  RecipeTests.swift
+//  RecipeTests
 //
 //  Created by Aaron Huánuco on 08/02/2020.
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
 //
 
 import XCTest
-@testable import Core
+import Core
 
-class CoreTests: XCTestCase {
+class RecipeTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testHasLactoseIsFalseByDefault() {
+        let sut = Recipe(name: "", ingredients: "", url: Constants.url, thumbnail: Constants.url)
+        XCTAssertFalse(sut.hasLactose)
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testHasLactoseIsTrueIfContainsMilkAsIngredient() {
+        let sut = Recipe(name: "", ingredients: "milk, tea", url: Constants.url, thumbnail: Constants.url)
+        XCTAssertTrue(sut.hasLactose)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testHasLactoseIsTrueIfContainsCheeseAsIngredient() {
+        let sut = Recipe(name: "", ingredients: "tea, cheese", url: Constants.url, thumbnail: Constants.url)
+        XCTAssertTrue(sut.hasLactose)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testHasLactoseIsTrueIfContainsMilkAndCheeseAsIngredients() {
+        let sut = Recipe(name: "", ingredients: "cheese, milk", url: Constants.url, thumbnail: Constants.url)
+        XCTAssertTrue(sut.hasLactose)
     }
-
+    
+    func testHasLactoseIsTrueIfContainsMilkAndCheeseAsIngredientsAndInNoOtherField() {
+        let sut = Recipe(name: "milk, cheese", ingredients: "", url: Constants.milkURL, thumbnail: Constants.cheeseURL)
+        XCTAssertFalse(sut.hasLactose)
+    }
+    
+    private enum Constants {
+        static let url = URL(string: "https://www.youtube.com")!
+        static let milkURL = URL(string: "https://www.youtube.com")!
+        static let cheeseURL = URL(string: "https://www.youtube.com")!
+    }
 }
