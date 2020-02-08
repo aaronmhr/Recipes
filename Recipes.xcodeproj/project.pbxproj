@@ -253,6 +253,7 @@
 		187E130123EF79F900B544F3 /* SearchFormatterInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormatterInteractorTests.swift; sourceTree = "<group>"; };
 		187E130323EF7C4500B544F3 /* SaveFavoriteInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoriteInteractorTests.swift; sourceTree = "<group>"; };
 		187E130623EF7DC400B544F3 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		187E130823EF7F2000B544F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38418A69CF3EE8E87A47ADA0 /* Pods_Recipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -343,6 +344,7 @@
 		1844BBAC23EB6C5000A4BF6A = {
 			isa = PBXGroup;
 			children = (
+				187E130823EF7F2000B544F3 /* README.md */,
 				1844BBB723EB6C5000A4BF6A /* Recipes */,
 				1844BBCE23EB6C5300A4BF6A /* RecipesTests */,
 				187CBF6923EE12EF001AED72 /* Database */,
