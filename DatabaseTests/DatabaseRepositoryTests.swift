@@ -48,11 +48,8 @@ class DatabaseRepositoryTests: XCTestCase {
 struct DummyError: Error { }
 
 private class SavingServiceSpy: DatabaseServiceProtocol {
-    private var shouldThrow: Bool
-
-    
     var savedObject: Object?
-    
+    private var shouldThrow: Bool
     init(shouldThrow: Bool) {
         self.shouldThrow = shouldThrow
     }
@@ -70,35 +67,5 @@ private class SavingServiceSpy: DatabaseServiceProtocol {
     }
     func delete<T: Object>(_ object: T) throws {
         fatalError()
-    }
-}
-
-private class ReadingServiceSpy: DatabaseServiceProtocol {
-    var savedObject: Object?
-    
-    func save<T: Object>(_ object: T) throws {
-        savedObject = object
-    }
-    
-    func read<T: Object>(_ objectType: T.Type) throws -> Results<T> {
-        fatalError()
-    }
-    func delete<T: Object>(_ object: T) throws {
-        fatalError()
-    }
-}
-
-private class DeletingServiceSpy: DatabaseServiceProtocol {
-    var savedObject: Object?
-    
-    func save<T: Object>(_ object: T) throws {
-        
-    }
-    
-    func read<T: Object>(_ objectType: T.Type) throws -> Results<T> {
-        fatalError()
-    }
-    func delete<T: Object>(_ object: T) throws {
-        savedObject = object
     }
 }
