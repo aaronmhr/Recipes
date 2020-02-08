@@ -6,6 +6,7 @@
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
 //
 
+import Core
 import RealmSwift
 
 final class RealmRecipe: Object {
@@ -13,4 +14,14 @@ final class RealmRecipe: Object {
     @objc dynamic var  ingredients: String = ""
     @objc dynamic var  url: Data = Data()
     @objc dynamic var  thumbnail: Data = Data()
+}
+
+extension RealmRecipe {
+    static func makeRealmRecipe(_ recipe: Recipe) -> RealmRecipe {
+        let realmRecipe = RealmRecipe()
+        realmRecipe.name = recipe.name
+        realmRecipe.url = recipe.url.dataRepresentation
+        realmRecipe.thumbnail = recipe.thumbnail.dataRepresentation
+        return realmRecipe
+    }
 }
