@@ -69,6 +69,8 @@
 		187E12FA23EF0CC300B544F3 /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844BC0923EB70F000A4BF6A /* RecipeRepository.swift */; };
 		187E12FF23EF28B300B544F3 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E12FE23EF28B300B544F3 /* RealmServiceTests.swift */; };
 		187E130223EF79F900B544F3 /* SearchFormatterInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E130123EF79F900B544F3 /* SearchFormatterInteractorTests.swift */; };
+		187E130423EF7C4500B544F3 /* SaveFavoriteInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E130323EF7C4500B544F3 /* SaveFavoriteInteractorTests.swift */; };
+		187E130723EF7DC400B544F3 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E130623EF7DC400B544F3 /* Testing.swift */; };
 		C65A764E8A8273D4157DB5E2 /* Pods_DatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */; };
 		CE8B8145C8D91C5CD53FC284 /* Pods_Recipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38418A69CF3EE8E87A47ADA0 /* Pods_Recipes.framework */; };
 		CF321C0A5F0857843680A300 /* Pods_RecipesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5428717627A3D23B50AE489 /* Pods_RecipesTests.framework */; };
@@ -249,6 +251,8 @@
 		187E12E623EF0BA700B544F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187E12FE23EF28B300B544F3 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
 		187E130123EF79F900B544F3 /* SearchFormatterInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormatterInteractorTests.swift; sourceTree = "<group>"; };
+		187E130323EF7C4500B544F3 /* SaveFavoriteInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoriteInteractorTests.swift; sourceTree = "<group>"; };
+		187E130623EF7DC400B544F3 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		25F7A72F9187700EE6CE4F9C /* Pods-RecipiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesTests/Pods-RecipiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30745114B0C1E77BDE92724D /* Pods_DatabaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38418A69CF3EE8E87A47ADA0 /* Pods_Recipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,6 +390,7 @@
 		1844BBCE23EB6C5300A4BF6A /* RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
+				187E130523EF7DB800B544F3 /* Model */,
 				187E130023EF609000B544F3 /* List */,
 				1844BBD123EB6C5300A4BF6A /* Info.plist */,
 			);
@@ -737,8 +742,17 @@
 			children = (
 				1844BBCF23EB6C5300A4BF6A /* ListInteractorTests.swift */,
 				187E130123EF79F900B544F3 /* SearchFormatterInteractorTests.swift */,
+				187E130323EF7C4500B544F3 /* SaveFavoriteInteractorTests.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		187E130523EF7DB800B544F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187E130623EF7DC400B544F3 /* Testing.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4867C6FBB8FE1F8F05A5B654 /* Frameworks */ = {
@@ -1238,6 +1252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1844BBD023EB6C5300A4BF6A /* ListInteractorTests.swift in Sources */,
+				187E130423EF7C4500B544F3 /* SaveFavoriteInteractorTests.swift in Sources */,
+				187E130723EF7DC400B544F3 /* Testing.swift in Sources */,
 				187E130223EF79F900B544F3 /* SearchFormatterInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

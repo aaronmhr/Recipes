@@ -16,7 +16,6 @@ class ListInteractorTests: XCTestCase {
         XCTAssertTrue(sut.recipes.isEmpty)
     }
     
-    
     func testAttemptNewSearchDoesNotIncrementTheStoredResults() {
         let (sut, repository) = makeSUT()
         sut.attemptNewSearch(for: "test", completion: {_ in })
@@ -61,20 +60,12 @@ class ListInteractorTests: XCTestCase {
     }
     
     private func makeSUT() -> (ListInteractor, RecipeRepositorySpy) {
-        let repository = RecipeRepositorySpy(recipe: makeRecipe(name: "0"))
+        let repository = RecipeRepositorySpy(recipe: Testing.makeRecipe(name: "0"))
         return (ListInteractor(with: repository), repository)
-    }
-    
-    func makeRecipe(name: String) -> Recipe {
-        return Recipe(name: name, ingredients: "\(name), \(name), \(name)", url: Constants.url, thumbnail: Constants.url)
-    }
-    
-    private enum Constants {
-        static let url = URL(string: "https://a-url.com")!
     }
 }
 
-class RecipeRepositorySpy: RecipeRepository {
+final class RecipeRepositorySpy: RecipeRepository {
     let recipe: Recipe
     var text: String?
     
