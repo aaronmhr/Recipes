@@ -22,7 +22,7 @@ public final class MockingRecipeRepository: RecipeRepository {
 }
 
 private extension Decodable {
-    static func readJSONFrom<T:Decodable>(from file: String, fileExtension: String="json", bundle: Bundle = .main) throws -> T {
+    static func readJSONFrom<T:Decodable>(from file: String, fileExtension: String="json", bundle: Bundle = Bundle(for: MockingRecipeRepository.self)) throws -> T {
         guard let url = bundle.url(forResource: file, withExtension: fileExtension) else {
             throw NSError(domain: NSURLErrorDomain, code: NSURLErrorResourceUnavailable)
         }
