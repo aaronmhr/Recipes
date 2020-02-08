@@ -6,14 +6,19 @@
 //  Copyright © 2020 Aaron Huánuco. All rights reserved.
 //
 
+import Core
+
 protocol FavoritesInteractorProtocol {
+    var recipes: [Recipe] { get }
 }
 
 protocol FavoritesRouterProtocol {
 }
 
 protocol FavoritesPresenterProtocol {
+    func viewDidLoad()
 }
 
 protocol FavoritesViewProtocol: class {
+    var recipes: [RecipeViewModel] { get set }
 }

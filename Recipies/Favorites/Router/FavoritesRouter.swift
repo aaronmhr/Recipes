@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Database
 
 final class FavoritesRouter: StoryboardInstantiator {
     weak var view: FavoritesViewController!
@@ -19,7 +20,9 @@ final class FavoritesRouter: StoryboardInstantiator {
         let viewController = defaultViewController(for: FavoritesViewController.self)
         let router = FavoritesRouter(withView: viewController)
 
-        let interactor = FavoritesInteractor()
+        let databaseService = RealmService()
+        let databaseRepository = DatabaseRepository(service: databaseService)
+        let interactor = FavoritesInteractor(database: databaseRepository)
         let presenter = FavoritesPresenter(withView: viewController, interactor: interactor, router: router)
 
         viewController.presenter = presenter

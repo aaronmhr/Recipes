@@ -10,6 +10,7 @@ import UIKit
 
 final class FavoritesViewController: UIViewController {
     var presenter: FavoritesPresenterProtocol!
+    var recipes: [RecipeViewModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

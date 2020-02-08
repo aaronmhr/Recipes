@@ -8,10 +8,10 @@
 
 import RealmSwift
 
-final class RealmService: DatabaseServiceProtocol {
+public final class RealmService: DatabaseServiceProtocol {
     private let configuration: Realm.Configuration
     
-    init(configuration: Realm.Configuration = .defaultConfiguration) {
+    public init(configuration: Realm.Configuration = .defaultConfiguration) {
         self.configuration = configuration
     }
     
@@ -23,7 +23,7 @@ final class RealmService: DatabaseServiceProtocol {
         }
     }
     
-    func read<T: Object>(_ objectType: T.Type) throws -> Results<T> {
+    public func read<T: Object>(_ objectType: T.Type) throws -> Results<T> {
         switch realmResult {
         case .success(let realm):
             return realm.objects(objectType)
@@ -32,7 +32,7 @@ final class RealmService: DatabaseServiceProtocol {
         }
     }
     
-    func create<T: Object>(_ object: T) throws {
+    public func create<T: Object>(_ object: T) throws {
         switch realmResult {
         case .success(let realm):
             do {
@@ -47,7 +47,7 @@ final class RealmService: DatabaseServiceProtocol {
         }
     }
 
-    func delete<T: Object>(_ object: T) throws {
+    public func delete<T: Object>(_ object: T) throws {
         switch realmResult {
         case .success(let realm):
             do {

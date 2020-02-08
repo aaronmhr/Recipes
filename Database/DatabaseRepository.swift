@@ -9,14 +9,14 @@
 import Core
 import RealmSwift
 
-final class DatabaseRepository: DatabaseRepositoryProtocol {
+public final class DatabaseRepository: DatabaseRepositoryProtocol {
     private let service: DatabaseServiceProtocol
     
-    init(service: DatabaseServiceProtocol) {
+    public init(service: DatabaseServiceProtocol) {
         self.service = service
     }
     
-    func deleteFavorite(_ recipe: Recipe) throws {
+    public func deleteFavorite(_ recipe: Recipe) throws {
         do {
             let realmRecipe = RealmRecipe.make(with: recipe)
             try service.delete(realmRecipe)
@@ -25,7 +25,7 @@ final class DatabaseRepository: DatabaseRepositoryProtocol {
         }
     }
     
-    func addFavorite(_ recipe: Recipe) throws {
+    public func addFavorite(_ recipe: Recipe) throws {
         do {
             let realmRecipe = RealmRecipe.make(with: recipe)
             try service.create(realmRecipe)
@@ -34,7 +34,7 @@ final class DatabaseRepository: DatabaseRepositoryProtocol {
         }
     }
     
-    func readFavorites() -> Result<[Recipe], DatabaseRepositoryError> {
+    public func readFavorites() -> Result<[Recipe], DatabaseRepositoryError> {
         do {
             let storedRecipes = Array(try service.read(RealmRecipe.self))
             let recipes = storedRecipes.compactMap(RealmRecipe.makeRecipe)

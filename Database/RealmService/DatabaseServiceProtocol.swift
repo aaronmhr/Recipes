@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-protocol DatabaseServiceProtocol {
+public protocol DatabaseServiceProtocol {
     func read<T: Object>(_ objectType: T.Type) throws -> Results<T>
     func create<T: Object>(_ object: T) throws
     func delete<T: Object>(_ object: T) throws
