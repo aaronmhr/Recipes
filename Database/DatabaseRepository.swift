@@ -17,8 +17,8 @@ final class DatabaseRepository: DatabaseRepositoryProtocol {
     }
     
     func deleteFavorite(_ recipe: Recipe) throws {
-        let realmRecipe = RealmRecipe.make(recipe)
         do {
+            let realmRecipe = RealmRecipe.make(with: recipe)
             try service.delete(realmRecipe)
         } catch {
             throw DatabaseRepositoryError.databaseError
@@ -26,8 +26,8 @@ final class DatabaseRepository: DatabaseRepositoryProtocol {
     }
     
     func addFavorite(_ recipe: Recipe) throws {
-        let realmRecipe = RealmRecipe.make(recipe)
         do {
+            let realmRecipe = RealmRecipe.make(with: recipe)
             try service.create(realmRecipe)
         } catch {
             throw DatabaseRepositoryError.databaseError

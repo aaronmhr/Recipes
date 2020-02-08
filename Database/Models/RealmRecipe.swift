@@ -17,7 +17,7 @@ final class RealmRecipe: Object {
 }
 
 extension RealmRecipe {
-    static func make(_ recipe: Recipe) -> RealmRecipe {
+    static func make(with recipe: Recipe) -> RealmRecipe {
         let realmRecipe = RealmRecipe()
         realmRecipe.name = recipe.name
         realmRecipe.url = recipe.url.dataRepresentation
