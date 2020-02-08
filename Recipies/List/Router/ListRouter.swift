@@ -43,6 +43,7 @@ extension ListRouter: ListRouterProtocol {
     
     func showFavorites(animated: Bool) {
         let viewController = FavoritesRouter.assembleModule()
-        view.navigationController?.present(viewController, animated: animated, completion: nil)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        view.navigationController?.present(navigationController, animated: animated, completion: nil)
     }
 }

@@ -11,11 +11,7 @@ import UIKit
 final class FavoritesViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     var presenter: FavoritesPresenterProtocol!
-    var recipes: [RecipeViewModel] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var recipes: [RecipeViewModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +27,24 @@ final class FavoritesViewController: UIViewController {
 }
 
 extension FavoritesViewController: FavoritesViewProtocol {
-
+    func setTilte(_ title: String) {
+        self.title = title
+    }
+    
+    func setViewModels(_ viewModels: [RecipeViewModel]) {
+        recipes = viewModels
+        tableView.reloadData()
+    }
 }
 
 extension FavoritesViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            recipes.remove(at: indexPath.row)
+            presenter.deleteFavoriteAtIndex(indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
 extension FavoritesViewController: UITableViewDataSource {

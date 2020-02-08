@@ -20,7 +20,16 @@ final class FavoritesPresenter {
 
 extension FavoritesPresenter: FavoritesPresenterProtocol {
     func viewDidLoad() {
+        view.setTilte(Localizables.title)
         let viewModels = interactor.recipes.map(RecipeViewModel.make)
-        view.recipes = viewModels
+        view.setViewModels(viewModels)
+    }
+    
+    func deleteFavoriteAtIndex(_ index: Int) {
+        interactor.deleteFavorite(at: index)
+    }
+    
+    private enum Localizables {
+        static let title = "Favorites"
     }
 }

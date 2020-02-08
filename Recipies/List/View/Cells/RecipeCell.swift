@@ -23,6 +23,7 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
         super.awakeFromNib()
         addShadowToCell()
         configureHasLactoseLabel()
+        configureFavoriteButton()
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -62,6 +63,11 @@ final class RecipeCell: UICollectionViewCell, NibReusable {
         hasLactoseLabel.transform = CGAffineTransform(rotationAngle: 45 * CGFloat.pi / 180)
     }
     
+    private func configureFavoriteButton() {
+        favoritesButton.layer.borderWidth = 1.0
+        favoritesButton.layer.cornerRadius = 15.0
+        favoritesButton.layer.borderColor = #colorLiteral(red: 0, green: 0.4980392157, blue: 1, alpha: 1)
+    }
     
     @IBAction func favoritesButtonTapped(_ sender: UIButton) {
         delegate?.didSelectFavoriteAtIndex(index)

@@ -10,6 +10,7 @@ import Core
 
 protocol FavoritesInteractorProtocol {
     var recipes: [Recipe] { get }
+    func deleteFavorite(at index: Int)
 }
 
 protocol FavoritesRouterProtocol {
@@ -17,8 +18,10 @@ protocol FavoritesRouterProtocol {
 
 protocol FavoritesPresenterProtocol {
     func viewDidLoad()
+    func deleteFavoriteAtIndex(_ index: Int)
 }
 
 protocol FavoritesViewProtocol: class {
-    var recipes: [RecipeViewModel] { get set }
+    func setTilte(_ title: String)
+    func setViewModels(_ viewModels: [RecipeViewModel])
 }

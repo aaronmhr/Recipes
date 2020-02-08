@@ -24,4 +24,8 @@ extension FavoritesInteractor: FavoritesInteractorProtocol {
             return []
         }
     }
+    
+    func deleteFavorite(at index: Int) {
+        try? database.deleteFavorite(recipes[index])
+    }
 }

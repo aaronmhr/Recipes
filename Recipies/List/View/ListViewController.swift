@@ -63,9 +63,8 @@ final class ListViewController: UIViewController {
 
 extension ListViewController: ListViewProtocol {
     func setupScreen(title: String, searchPlaceholder: String) {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
         self.title = title
+        navigationController?.navigationBar.prefersLargeTitles = true
         searchController.searchBar.placeholder = searchPlaceholder
     }
 }
@@ -106,7 +105,7 @@ extension ListViewController: UICollectionViewDataSource {
 
 extension ListViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 10, left: 0, bottom: 20, right: 0)
+        return .init(top: 20, left: 0, bottom: 20, right: 0)
     }
 }
 

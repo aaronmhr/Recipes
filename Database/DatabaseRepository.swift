@@ -18,7 +18,8 @@ public final class DatabaseRepository: DatabaseRepositoryProtocol {
     
     public func deleteFavorite(_ recipe: Recipe) throws {
         do {
-            let realmRecipe = RealmRecipe.make(with: recipe)
+            let  savedRecipe = try service.read(RealmRecipe.self).filter("name == %@", recipe.name).first
+            guard let realmRecipe = savedRecipe else { return }
             try service.delete(realmRecipe)
         } catch {
             throw DatabaseRepositoryError.databaseError
