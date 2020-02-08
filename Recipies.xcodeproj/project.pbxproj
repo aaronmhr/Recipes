@@ -484,9 +484,8 @@
 		187CBF6923EE12EF001AED72 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				187CBF8823EE148E001AED72 /* RealmService.swift */,
-				187E128123EEA17800B544F3 /* RealmRecipe.swift */,
-				187CBF8A23EE14C8001AED72 /* RealmServiceError.swift */,
+				187E12A823EEA5D600B544F3 /* Models */,
+				187E12A923EEA5E400B544F3 /* RealmService */,
 				187CBF6A23EE12EF001AED72 /* Database.h */,
 				187CBF6B23EE12EF001AED72 /* Info.plist */,
 			);
@@ -519,6 +518,23 @@
 				187E129923EEA31300B544F3 /* Info.plist */,
 			);
 			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		187E12A823EEA5D600B544F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				187E128123EEA17800B544F3 /* RealmRecipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		187E12A923EEA5E400B544F3 /* RealmService */ = {
+			isa = PBXGroup;
+			children = (
+				187CBF8823EE148E001AED72 /* RealmService.swift */,
+				187CBF8A23EE14C8001AED72 /* RealmServiceError.swift */,
+			);
+			path = RealmService;
 			sourceTree = "<group>";
 		};
 		4867C6FBB8FE1F8F05A5B654 /* Frameworks */ = {
