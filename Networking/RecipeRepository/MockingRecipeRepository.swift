@@ -8,8 +8,9 @@
 
 import Core
 
-final class MockingRecipeRepository: RecipeRepository {
-    func getRecipies(for text: String, page: Int, completion: @escaping (Result<[Recipe], RepositoryError>) -> Void) {
+public final class MockingRecipeRepository: RecipeRepository {
+    public init () { }
+    public func getRecipies(for text: String, page: Int, completion: @escaping (Result<[Recipe], RepositoryError>) -> Void) {
         do {
             let response: ResponseModel = try ResponseModel.readJSONFrom(from: "test" + "\(page)")
             let recipies = response.results?.compactMap(RecipeResponse.makeRecipe) ?? []
