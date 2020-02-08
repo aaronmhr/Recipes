@@ -29,7 +29,7 @@ public final class DatabaseRepository: DatabaseRepositoryProtocol {
     public func addFavorite(_ recipe: Recipe) throws {
         do {
             let realmRecipe = RealmRecipe.make(with: recipe)
-            try service.create(realmRecipe)
+            try service.save(realmRecipe)
         } catch {
             throw DatabaseRepositoryError.databaseError
         }

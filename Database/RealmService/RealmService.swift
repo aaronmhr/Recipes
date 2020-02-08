@@ -32,7 +32,7 @@ public final class RealmService: DatabaseServiceProtocol {
         }
     }
     
-    public func create<T: Object>(_ object: T) throws {
+    public func save<T: Object>(_ object: T) throws {
         switch realmResult {
         case .success(let realm):
             do {
